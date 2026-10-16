@@ -1,0 +1,11 @@
+{
+  "demo": false,
+  "questions": [
+    {
+      "id": "q001",
+      "realImages": ["assets/questions/q001/real-1.jpg", "assets/questions/q001/real-2.jpg"],
+      "aiImage": {"src": "assets/questions/q001/ai.jpg", "model": "填写真实生成模型名称"},
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+const root = new URL('../', import.meta.url);
+execFileSync(process.execPath, [fileURLToPath(new URL('./check-bank.mjs', import.meta.url))], { stdio: 'inherit' });
+const dist = new URL('dist/', root);
+await rm(dist, { recursive: true, force: true });
+await mkdir(dist, { recursive: true });
+for (const name of ['index.html', 'style.css', 'app.js', 'game.js', 'assets', 'data']) await cp(new URL(name, root), new URL(name, dist), { recursive: true, filter: source => !source.endsWith('.DS_Store') });
+await writeFile(new URL('.nojekyll', dist), '');
+console.log('静态网站已生成至 dist/，可直接部署到 GitHub Pages。');

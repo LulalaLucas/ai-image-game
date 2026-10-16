@@ -1,0 +1,12 @@
+{
+  "name": "ai-image-game",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check-bank.mjs",
+    "test": "node --test scripts/game.test.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

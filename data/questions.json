@@ -1,0 +1,149 @@
+{
+  "demo": true,
+  "questions": [
+    {
+      "id": "demo-01",
+      "realImages": [
+        "assets/demo/02.jpg",
+        "assets/demo/03.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/13.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-02",
+      "realImages": [
+        "assets/demo/01.jpg",
+        "assets/demo/03.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/13.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-03",
+      "realImages": [
+        "assets/demo/01.jpg",
+        "assets/demo/02.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/13.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-04",
+      "realImages": [
+        "assets/demo/05.jpg",
+        "assets/demo/06.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/14.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-05",
+      "realImages": [
+        "assets/demo/04.jpg",
+        "assets/demo/06.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/14.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-06",
+      "realImages": [
+        "assets/demo/04.jpg",
+        "assets/demo/05.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/14.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-07",
+      "realImages": [
+        "assets/demo/08.jpg",
+        "assets/demo/09.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/15.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-08",
+      "realImages": [
+        "assets/demo/07.jpg",
+        "assets/demo/09.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/15.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-09",
+      "realImages": [
+        "assets/demo/07.jpg",
+        "assets/demo/08.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/15.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-10",
+      "realImages": [
+        "assets/demo/11.jpg",
+        "assets/demo/12.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/16.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-11",
+      "realImages": [
+        "assets/demo/10.jpg",
+        "assets/demo/12.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/16.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    },
+    {
+      "id": "demo-12",
+      "realImages": [
+        "assets/demo/10.jpg",
+        "assets/demo/11.jpg"
+      ],
+      "aiImage": {
+        "src": "assets/demo/16.jpg",
+        "model": "演示模型（占位）"
+      },
+      "enabled": true
+    }
+  ]
+}

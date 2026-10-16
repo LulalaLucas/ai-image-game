@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c1c2d">
+  <meta name="description" content="从三张图片中找出 AI 生成的图片，每轮随机挑战八题。">
+  <title>哪张是 AI？</title>
+  <link rel="icon" href="./assets/event-logo.png">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-logo" src="./assets/event-logo.png" alt="北京大学校徽" width="52" height="52">
+      <div><div class="brand-school">北京大学计算机学院</div><div class="brand-event"><span>1024</span> 文化节</div></div>
+    </div>
+    <button class="reset-button" id="reset" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1.4 7M4 4v6h6"/></svg><span>重置</span></button>
+  </header>
+  <main>
+    <section class="introduction" aria-labelledby="title">
+      <div class="eyebrow"><span class="tiny-dot"></span>AI 图像辨识挑战</div>
+      <h1 id="title">哪张是 <span>AI</span>？</h1>
+      <p class="instructions">每组三张图片中，有一张由人工智能生成。<br class="mobile-break">请仔细观察，并选择您认为由 AI 生成的图片。</p>
+    </section>
+    <section id="game" class="game" aria-label="图片辨识游戏" aria-busy="true">
+      <div class="round-bar">
+        <div class="question-number"><strong id="question-number">01</strong><span id="question-total">/ 08</span></div>
+        <div id="progress" class="progress" aria-label="答题进度"></div>
+        <div class="score">答对 <strong id="score">0</strong> 题</div>
+      </div>
+      <div id="cards" class="cards"></div>
+      <div class="action-bar">
+        <p class="view-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5M7 10h6m-3-3v6"/></svg>点击图片可放大查看</p>
+        <button id="next" class="primary-button" type="button" disabled>下一题 <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <section id="result" class="result" aria-labelledby="result-title" hidden></section>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <div id="error" class="error-box" role="alert" hidden></div>
+    <p id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+  </main>
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-toolbar"><span id="lightbox-title">图片 A</span><div class="zoom-controls"><button id="zoom-out" type="button" aria-label="缩小">−</button><button id="zoom-reset" type="button" aria-label="恢复适合屏幕大小">100%</button><button id="zoom-in" type="button" aria-label="放大">＋</button><button id="close-lightbox" class="close-button" type="button" aria-label="关闭放大图片">×</button></div></div>
+    <div id="lightbox-stage" class="lightbox-stage"><div id="lightbox-canvas"><img id="large-image" alt="放大图片"></div></div>
+    <div class="lightbox-bottom"><button id="previous-image" type="button" aria-label="上一张图片">←</button><span>左右切换图片 · 按 Esc 关闭</span><button id="next-image" type="button" aria-label="下一张图片">→</button></div>
+  </dialog>
+</body>
+</html>
