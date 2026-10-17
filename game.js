@@ -1,4 +1,4 @@
-export const ROUND_SIZE = 10;
+export const ROUND_SIZE = 6;
 
 export function shuffle(items, random = Math.random) {
   const result = [...items];
@@ -48,7 +48,7 @@ export function createRound(questions, random = Math.random, seenIds = new Set()
   ];
   const ai = prioritize(questions.filter(q => q.label === 'ai'));
   const real = prioritize(questions.filter(q => q.label === 'real'));
-  const targetAI = Math.floor(size / 2) + (size % 2 && random() < .5 ? 1 : 0);
+  const targetAI = size === ROUND_SIZE ? 3 + (random() < .5 ? 0 : 1) : Math.ceil(size / 2);
   const selected = [...ai.slice(0, targetAI), ...real.slice(0, size - targetAI)];
   if (selected.length < size) {
     const ids = new Set(selected.map(q => q.id));
