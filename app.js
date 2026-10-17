@@ -160,7 +160,7 @@ function nextQuestion() {
 function showResult() {
   $('game').hidden = true;
   const result = $('result');
-  const title = node('h2', '', `这一轮答对了 ${state.score} 题`); title.id = 'result-title';
+  const title = node('h2', '', `恭喜你一共答对了${state.score}题`); title.id = 'result-title';
   const score = node('div', 'result-score', String(state.score));
   score.append(node('span', '', ` / ${state.round.length}`));
   const accuracy = node('p', 'result-accuracy', `正确率 ${Math.round(state.score / state.round.length * 100)}%`);
