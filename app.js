@@ -1,6 +1,6 @@
 import { ROUND_SIZE, QUESTION_SECONDS, validateBank, createRound, answerQuestion, expireQuestion } from './game.js';
 const $ = id => document.getElementById(id);
-const state = { bank: [], round: [], seenIds: new Set(), index: 0, score: 0, loaded: false, imagesReady: [false, false], zoom: 1, deadline: 0, timerId: null, renderToken: 0 };
+const state = { bank: [], round: [], seenIds: new Set(), index: 0, score: 0, loaded: false, imagesReady: [false, false], zoom: 1, deadline: 0, timerId: null, advanceId: null, renderToken: 0 };
 const current = () => state.round[state.index];
 const letter = index => index === 0 ? 'A' : 'B';
 const labelText = label => label === 'ai' ? 'AI 生成' : '真实照片';
@@ -11,7 +11,13 @@ function node(tag, className, text) {
   return element;
 }
 function announce(text) { $('announcement').textContent = text; }
-function lockAnswers(locked) { for (const index of [0, 1]) $(`answer-${index}`).disabled = locked; }
+function lockAnswers(locked) {
+  for (const index of [0, 1]) {
+    $(`answer-${index}`).disabled = locked;
+    $(`picture-${index}`).disabled = locked;
+  }
+}
+function stopAdvance() { clearTimeout(state.advanceId); state.advanceId = null; }
 function stopTimer() { clearInterval(state.timerId); state.timerId = null; }
 function updateTimer() {
   if (!current() || current().answered || !state.deadline) return;
@@ -55,7 +61,7 @@ async function loadBank() {
   }
 }
 function startRound() {
-  stopTimer();
+  stopTimer(); stopAdvance();
   if ($('lightbox').open) $('lightbox').close();
   const previousIds = new Set(state.round.flatMap(q => q.options.map(image => image.id)));
   state.round = createRound(state.bank, Math.random, state.seenIds, previousIds);
@@ -69,7 +75,8 @@ function renderProgress() {
   $('progress').setAttribute('aria-label', `已完成 ${state.round.filter(q => q.answered).length} / ${state.round.length} 题`);
 }
 function renderQuestion() {
-  stopTimer();
+  stopTimer(); stopAdvance();
+  if ($('lightbox').open) $('lightbox').close();
   state.deadline = 0; state.loaded = false; state.imagesReady = [false, false];
   const question = current(), token = ++state.renderToken;
   $('game').setAttribute('aria-busy', 'true');
@@ -79,8 +86,7 @@ function renderQuestion() {
   $('timer').textContent = QUESTION_SECONDS;
   $('timer-status').textContent = '图片加载后开始计时';
   $('timer-fill').style.width = '100%'; $('timer-panel').classList.remove('urgent');
-  lockAnswers(true); $('next').disabled = true;
-  $('next').textContent = state.index === state.round.length - 1 ? '查看结果 →' : '下一题 →';
+  lockAnswers(true); $('advance-notice').hidden = true;
   question.options.forEach((option, index) => {
     $(`option-card-${index}`).className = 'option-card';
     const button = $(`answer-${index}`);
@@ -88,7 +94,8 @@ function renderQuestion() {
     button.setAttribute('aria-label', `选择图片 ${letter(index)} 为 AI 生成`);
     button.replaceChildren(node('span', 'choice-letter', letter(index)), node('span', '', '选这张'), node('small', '', index === 0 ? '← / 1' : '→ / 2'));
     const picture = $(`picture-${index}`), image = $(`question-image-${index}`), loading = $(`image-loading-${index}`);
-    picture.disabled = true; picture.setAttribute('aria-label', `放大查看图片 ${letter(index)}`);
+    picture.disabled = true; picture.setAttribute('aria-label', `选择图片 ${letter(index)} 为 AI 生成`);
+    $(`expand-${index}`).disabled = true;
     picture.querySelectorAll('.answer-badge, .reveal-mark').forEach(badge => badge.remove());
     image.classList.add('loading'); loading.hidden = false; loading.className = 'image-loading'; loading.textContent = '图片加载中…';
     image.onload = async () => {
@@ -99,7 +106,9 @@ function renderQuestion() {
       }
       if (token !== state.renderToken || current() !== question) return;
       state.imagesReady[index] = true;
-      image.classList.remove('loading'); loading.hidden = true; picture.disabled = false;
+      image.classList.remove('loading'); loading.hidden = true;
+      picture.setAttribute('aria-label', `选择图片 ${letter(index)} 为 AI 生成`);
+      $(`expand-${index}`).disabled = false;
       if (state.imagesReady.every(Boolean) && !question.answered) {
         state.loaded = true; $('game').setAttribute('aria-busy', 'false'); lockAnswers(false); startTimer();
       }
@@ -107,6 +116,7 @@ function renderQuestion() {
     image.onerror = () => {
       if (token !== state.renderToken || current() !== question) return;
       state.imagesReady[index] = false; state.loaded = false; stopTimer(); state.deadline = 0;
+      $(`expand-${index}`).disabled = true;
       lockAnswers(true); $('game').setAttribute('aria-busy', 'false');
       $('timer-status').textContent = '图片加载失败，重试后开始计时';
       loading.hidden = false; loading.classList.add('error'); loading.textContent = '加载失败，点击重试';
@@ -165,7 +175,16 @@ function finishAnswer(index) {
   const prefix = question.timedOut ? '时间到，本题未得分' : question.correct ? '答对了' : '答错了';
   const message = `${prefix} · ${letter(aiIndex)} 是 AI 生成图片`;
   feedback.replaceChildren(node('strong', 'feedback-heading', message)); feedback.hidden = false;
-  renderProgress(); $('next').disabled = false; $('next').focus({ preventScroll: true }); announce(message);
+  renderProgress();
+  const isLast = state.index === state.round.length - 1;
+  $('advance-notice').textContent = isLast ? '1.5 秒后自动查看结果' : '1.5 秒后自动进入下一题';
+  $('advance-notice').hidden = false;
+  announce(message);
+  stopAdvance();
+  const token = state.renderToken;
+  state.advanceId = setTimeout(() => {
+    if (current() === question && state.renderToken === token && !$('game').hidden) nextQuestion();
+  }, 1500);
 }
 function nextQuestion() {
   if (!current()?.answered || $('game').hidden) return;
@@ -173,7 +192,9 @@ function nextQuestion() {
   state.index++; renderQuestion();
 }
 function showResult() {
-  stopTimer(); $('game').hidden = true;
+  stopTimer(); stopAdvance();
+  if ($('lightbox').open) $('lightbox').close();
+  $('game').hidden = true;
   const result = $('result');
   const title = node('h2', '', `恭喜你一共答对了${state.score}题`); title.id = 'result-title';
   const score = node('div', 'result-score', String(state.score)); score.append(node('span', '', ` / ${state.round.length}`));
@@ -228,16 +249,16 @@ function openImage(index) {
 }
 for (const index of [0, 1]) {
   $(`picture-${index}`).addEventListener('click', () => {
-    if (state.imagesReady[index]) { openImage(index); return; }
+    if (state.imagesReady[index]) { submitAnswer(index); return; }
     const image = $(`question-image-${index}`), loading = $(`image-loading-${index}`);
     loading.textContent = '图片加载中…'; loading.classList.remove('error'); $(`picture-${index}`).disabled = true;
     $('game').setAttribute('aria-busy', 'true');
     const url = new URL(current().options[index].src, document.baseURI); url.searchParams.set('retry', Date.now()); image.src = url.href;
   });
   $(`answer-${index}`).addEventListener('click', () => submitAnswer(index));
+  $(`expand-${index}`).addEventListener('click', () => openImage(index));
 }
 $('reset').addEventListener('click', () => { startRound(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-$('next').addEventListener('click', nextQuestion);
 $('close-lightbox').addEventListener('click', () => $('lightbox').close());
 $('lightbox').addEventListener('close', () => { document.body.style.overflow = ''; });
 $('lightbox').addEventListener('click', event => {

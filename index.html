@@ -13,8 +13,8 @@
 <body>
   <header class="site-header">
     <div class="brand">
-      <img class="school-logo" src="./assets/pku-cs-logo.png" alt="北京大学计算机学院" width="420" height="88">
-      <div class="brand-event"><span>1024</span> 计算机文化艺术节</div>
+      <div class="brand-emblems"><img class="school-logo" src="./assets/pku-dual-emblems.jpg" alt="北京大学校徽与计算机学院院徽" width="640" height="640"></div>
+      <div class="brand-copy"><div class="brand-school">北京大学计算机学院</div><div class="brand-event"><span>1024</span> 计算机文化艺术节</div></div>
     </div>
     <button class="reset-button" id="reset" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1.4 7M4 4v6h6"/></svg><span>重新开始</span></button>
   </header>
@@ -36,26 +36,30 @@
       </div>
       <div id="choices" class="choices" role="group" aria-label="选择 AI 生成的图片">
         <article id="option-card-0" class="option-card">
-          <button id="picture-0" class="picture-button" type="button" aria-label="放大查看图片 A" disabled>
+          <div class="picture-wrap">
+          <button id="picture-0" class="picture-button" type="button" aria-label="选择图片 A 为 AI 生成" disabled>
             <img id="question-image-0" class="loading" alt="待判断的图片 A" decoding="async" draggable="false">
             <span id="image-loading-0" class="image-loading">图片加载中…</span>
-            <span class="expand-icon" aria-hidden="true">＋</span>
           </button>
+          <button id="expand-0" class="expand-button" type="button" aria-label="放大查看图片 A" title="放大查看（不作答）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M7.5 10.5h6m-3-3v6"/></svg></button>
+          </div>
           <button id="answer-0" class="choice-button" type="button" disabled><span class="choice-letter">A</span><span>选这张</span><small>← / 1</small></button>
         </article>
         <article id="option-card-1" class="option-card">
-          <button id="picture-1" class="picture-button" type="button" aria-label="放大查看图片 B" disabled>
+          <div class="picture-wrap">
+          <button id="picture-1" class="picture-button" type="button" aria-label="选择图片 B 为 AI 生成" disabled>
             <img id="question-image-1" class="loading" alt="待判断的图片 B" decoding="async" draggable="false">
             <span id="image-loading-1" class="image-loading">图片加载中…</span>
-            <span class="expand-icon" aria-hidden="true">＋</span>
           </button>
+          <button id="expand-1" class="expand-button" type="button" aria-label="放大查看图片 B" title="放大查看（不作答）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M7.5 10.5h6m-3-3v6"/></svg></button>
+          </div>
           <button id="answer-1" class="choice-button" type="button" disabled><span class="choice-letter">B</span><span>选这张</span><small>→ / 2</small></button>
         </article>
       </div>
       <div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
       <div class="action-bar">
-        <p class="view-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5M7 10h6m-3-3v6"/></svg>点击图片放大查看</p>
-        <button id="next" class="primary-button" type="button" disabled>下一题 <span aria-hidden="true">→</span></button>
+        <p class="view-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5M7 10h6m-3-3v6"/></svg>点击图片作答 · 右上角放大镜查看细节</p>
+        <p id="advance-notice" class="advance-notice" role="status" hidden></p>
       </div>
     </section>
     <section id="result" class="result" aria-labelledby="result-title" hidden></section>
