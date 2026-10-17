@@ -99,6 +99,6 @@ npm test
 npm run build
 ```
 
-`dist/` 是静态网站成品。游戏、题库及图片均包含在内；维护编辑器和导入脚本不进入部署成品。GitHub Actions 在推送到 main 后下载固定版本的题库图片，检查、构建并部署。所有页面资源使用相对路径，兼容 GitHub Pages 项目路径。
+`dist/` 是静态网站成品。游戏、题库及图片均包含在内；维护编辑器和导入脚本不进入部署成品。GitHub Actions 在推送到 main 后下载固定版本的题库图片，检查、构建并部署。所有页面资源使用相对路径，兼容 GitHub Pages 项目路径。构建时为页面脚本、导入模块和样式添加内容版本号，避免更新后继续使用浏览器缓存的旧版。
 
 在线游戏：https://lulalalucas.github.io/ai-image-game/ 。推送到 main 后由 GitHub Actions 自动部署；玩家刷新页面即可体验新版本。
