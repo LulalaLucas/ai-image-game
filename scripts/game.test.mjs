@@ -4,12 +4,13 @@ import { ROUND_SIZE, createRound, answerQuestion, validateBank } from '../game.j
 const make = (n, label = n % 2 ? 'ai' : 'real') => ({ id: `q${n}`, src: `assets/questions/q${n}.jpg`, label, ...(label === 'ai' ? { model: '来源标注模型' } : {}) });
 const bank = Array.from({ length: 50 }, (_, i) => make(i));
 function seeded(seed) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }; }
-test('每轮六张不重复图片，AI 随机三至四张，且不修改题库', () => {
+test('每轮六张不重复图片，固定三张真实和三张 AI，且不修改题库', () => {
   const original = structuredClone(bank);
   const round = createRound(bank, seeded(42));
   assert.equal(round.length, ROUND_SIZE);
   assert.equal(new Set(round.map(q => q.id)).size, ROUND_SIZE);
-  assert.ok([3, 4].includes(round.filter(q => q.label === 'ai').length));
+  assert.equal(round.filter(q => q.label === 'ai').length, 3);
+  assert.equal(round.filter(q => q.label === 'real').length, 3);
   assert.ok(round.every(q => q.selected === null && q.correct === null));
   assert.deepEqual(bank, original);
 });
@@ -21,13 +22,13 @@ test('重新开始会重新抽题，真假顺序没有固定交替模式', () =>
     samples.add(round.map(q => q.id).join(','));
     sequences.add(round.map(q => q.label).join(','));
     const count = round.filter(q => q.label === 'ai').length;
-    assert.ok([3, 4].includes(count));
+    assert.equal(count, 3);
     assert.equal(round.length, 6);
     aiCounts.add(count);
   }
   assert.ok(samples.size > 45);
-  assert.ok(sequences.size > 20);
-  assert.deepEqual([...aiCounts].sort(), [3, 4]);
+  assert.ok(sequences.size >= 10);
+  assert.deepEqual([...aiCounts], [3]);
 });
 test('连续换组优先抽未出现的图片，题库用完后也避开上一轮', () => {
   const seen = new Set();
@@ -37,7 +38,7 @@ test('连续换组优先抽未出现的图片，题库用完后也避开上一�
     const round = createRound(bank, random, seen, previous);
     const ids = round.map(q => q.id);
     assert.equal(round.length, 6);
-    assert.ok([3, 4].includes(round.filter(q => q.label === 'ai').length));
+    assert.equal(round.filter(q => q.label === 'ai').length, 3);
     assert.ok(ids.every(id => !previous.has(id)), '换组不能沿用上一轮的图片');
     for (const label of ['real', 'ai']) {
       const unseen = bank.filter(q => q.label === label && !seen.has(q.id)).length;
