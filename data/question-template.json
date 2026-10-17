@@ -1,10 +1,20 @@
 {
+  "version": 2,
   "demo": false,
   "questions": [
     {
       "id": "q001",
-      "realImages": ["assets/questions/q001/real-1.jpg", "assets/questions/q001/real-2.jpg"],
-      "aiImage": {"src": "assets/questions/q001/ai.jpg", "model": "填写真实生成模型名称"},
+      "src": "assets/questions/q001/real.jpg",
+      "label": "real",
+      "source": { "site": "摄影来源", "url": "https://example.com/photo" },
+      "enabled": true
+    },
+    {
+      "id": "q002",
+      "src": "assets/questions/q002/ai.jpg",
+      "label": "ai",
+      "model": "填写有来源依据的生成模型，未知时省略",
+      "source": { "site": "图片来源", "url": "https://example.com/image" },
       "enabled": true
     }
   ]

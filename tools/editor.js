@@ -1,106 +1,120 @@
 import { validateBank } from '../game.js';
 const $ = id => document.getElementById(id);
-let questions = [];
+const PAGE_SIZE = 30;
+let questions = [], page = 0;
 const previews = new Map();
 const el = (tag, className, text) => { const element = document.createElement(tag); if (className) element.className = className; if (text !== undefined) element.textContent = text; return element; };
-function status(text) { $('status').textContent = text; }
+const status = text => $('status').textContent = text;
 function clearPreviews() { for (const url of previews.values()) URL.revokeObjectURL(url); previews.clear(); }
+function textField(title, value, change) {
+  const label = el('label', 'text-field', title);
+  const input = el('input'); input.type = 'text'; input.value = value || '';
+  input.addEventListener('input', () => change(input.value.trim()));
+  label.append(input); return label;
+}
 function render() {
+  const filter = $('search').value.trim().toLowerCase();
+  const visible = questions.filter(q => `${q.id} ${q.source?.site || ''} ${q.model || ''}`.toLowerCase().includes(filter));
+  const pages = Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
+  page = Math.min(page, pages - 1);
   $('questions').replaceChildren();
-  $('empty').hidden = questions.length > 0;
+  $('empty').hidden = visible.length > 0;
   $('export').disabled = !questions.length;
-  questions.forEach((question, index) => {
-    const row = el('section', 'editor-question');
-    const top = el('div', 'question-top');
-    const idLabel = el('label', '', '题目编号 ');
-    const id = el('input'); id.type = 'text'; id.value = question.id;
-    id.addEventListener('input', () => question.id = id.value.trim());
-    idLabel.append(id);
+  $('page-label').textContent = `共 ${questions.length} 题 · 匹配 ${visible.length} 题 · 第 ${page + 1} / ${pages} 页`;
+  $('previous').disabled = page === 0; $('following').disabled = page >= pages - 1;
+  visible.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE).forEach(question => {
+    const row = el('section', 'editor-question'), top = el('div', 'question-top');
+    top.append(textField('题目编号', question.id, value => question.id = value));
     const enabledLabel = el('label', 'enabled');
     const enabled = el('input'); enabled.type = 'checkbox'; enabled.checked = question.enabled !== false;
     enabled.addEventListener('change', () => question.enabled = enabled.checked);
     enabledLabel.append(enabled, document.createTextNode('启用'));
-    const remove = el('button', 'remove', '移除'); remove.type = 'button'; remove.setAttribute('aria-label', `移除 ${question.id}`);
-    remove.addEventListener('click', () => { questions.splice(index, 1); render(); status(`当前共 ${questions.length} 道题。`); });
-    top.append(idLabel, enabledLabel, remove);
-    const fields = el('div', 'fields');
-    for (let i = 0; i < 3; i++) {
-      const field = el('div', 'field');
-      const label = el('label', '', ['真实图片 1', '真实图片 2', 'AI 图片'][i]);
-      const input = el('input'); input.type = 'text'; input.value = i < 2 ? question.realImages[i] || '' : question.aiImage.src || '';
-      input.id = `path-${index}-${i}`; label.htmlFor = input.id;
-      const image = el('img', 'preview'); image.alt = label.textContent + '预览';
-      const updateImage = () => { image.src = previews.get(input.value) || (input.value ? new URL('../' + input.value, location.href).href : ''); image.hidden = !input.value; };
-      image.addEventListener('error', () => image.hidden = true);
-      input.addEventListener('input', () => { if (i < 2) question.realImages[i] = input.value.trim(); else question.aiImage.src = input.value.trim(); updateImage(); });
-      updateImage(); field.append(label, image, input); fields.append(field);
+    const remove = el('button', 'remove', '移除'); remove.type = 'button';
+    remove.addEventListener('click', () => { questions.splice(questions.indexOf(question), 1); render(); });
+    top.append(enabledLabel, remove);
+    const fields = el('div', 'fields'), image = el('img', 'preview');
+    image.alt = '图片预览'; image.loading = 'lazy';
+    const updateImage = () => {
+      image.hidden = !question.src;
+      image.src = previews.get(question.src) || (question.src ? new URL('../' + question.src, location.href).href : '');
+    };
+    image.addEventListener('error', () => image.hidden = true); updateImage();
+    const inputs = el('div', 'image-fields');
+    inputs.append(textField('图片路径', question.src, value => { question.src = value; updateImage(); }));
+    const label = el('label', 'text-field', '真假标签'), select = el('select');
+    for (const [value, text] of [['real', '真实照片'], ['ai', 'AI 生成']]) {
+      const option = el('option', '', text); option.value = value; select.append(option);
     }
-    const modelBox = el('div', 'model-input');
-    const label = el('label', '', '生成模型'); const model = el('input'); model.type = 'text'; model.placeholder = '例如：实际使用的模型及版本'; model.value = question.aiImage.model || '';
-    model.id = `model-${index}`; label.htmlFor = model.id;
-    model.addEventListener('input', () => question.aiImage.model = model.value.trim());
-    modelBox.append(label, model); row.append(top, fields, modelBox); $('questions').append(row);
+    select.value = question.label || 'real';
+    select.addEventListener('change', () => question.label = select.value); label.append(select);
+    inputs.append(label, textField('生成模型（未知可留空）', question.model, value => { if (value) question.model = value; else delete question.model; }));
+    fields.append(image, inputs);
+    const source = el('div', 'source-fields');
+    for (const [key, name] of [['site', '题目来源'], ['url', '来源网址'], ['originalUrl', '原图出处'], ['author', '摄影作者']]) {
+      source.append(textField(name, question.source?.[key], value => { question.source ||= {}; question.source[key] = value; }));
+    }
+    row.append(top, fields, source); $('questions').append(row);
   });
 }
+function acceptBank(bank) {
+  if (!Array.isArray(bank.questions)) throw new Error('配置需要包含 questions 数组。');
+  if (bank.questions.some(q => !q || typeof q.src !== 'string' || !['real', 'ai'].includes(q.label))) throw new Error('请导入新版单图题库，每题需要 src 和 real / ai 标签。');
+  clearPreviews(); questions = structuredClone(bank.questions); page = 0; render();
+  status(`已导入 ${questions.length} 道单图题。${bank.demo ? '当前为演示配置。' : ''}`);
+}
+$('load-current').addEventListener('click', async () => {
+  try { const response = await fetch('../data/questions.json', { cache: 'no-cache' }); if (!response.ok) throw new Error('题库读取失败。'); acceptBank(await response.json()); }
+  catch (error) { status(error.message); }
+});
 $('folder-button').addEventListener('click', () => $('folder-input').click());
 $('json-button').addEventListener('click', () => $('json-input').click());
 $('folder-input').addEventListener('change', async event => {
-  const files = [...event.target.files];
-  if (!files.length) return;
   const groups = new Map();
-  for (const file of files) {
+  for (const file of event.target.files) {
     const parts = file.webkitRelativePath.split('/');
     if (parts.length !== 3 || parts.some(part => part.startsWith('.'))) continue;
     const [, id, name] = parts;
-    if (!/^(real-1|real-2|ai)\.(jpg|jpeg|png|webp|avif)$/i.test(name) && name !== 'model.txt') continue;
+    if (!/^(real|ai)\.(jpg|jpeg|png|webp|avif)$/i.test(name) && name !== 'model.txt') continue;
     if (!groups.has(id)) groups.set(id, []);
     groups.get(id).push(file);
   }
-  if (!groups.size) { status('没有识别到题目。请选择包含 q001 等题目子文件夹的 questions 文件夹，并按说明命名图片。'); event.target.value = ''; return; }
-  clearPreviews();
-  const imported = [];
-  const warnings = [];
-  for (const [id, group] of [...groups].sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))) {
-    const find = stem => group.filter(file => new RegExp(`^${stem}\\.(jpg|jpeg|png|webp|avif)$`, 'i').test(file.name));
-    const real1 = find('real-1'); const real2 = find('real-2'); const ai = find('ai');
-    if ([real1, real2, ai].some(matches => matches.length !== 1)) { warnings.push(`${id}：图片缺失或同名图片有多个格式，已跳过。`); continue; }
-    const path = file => `assets/questions/${id}/${file.name}`;
-    const modelFile = group.find(file => file.name === 'model.txt');
-    const model = modelFile ? (await modelFile.text()).trim() : '';
-    for (const file of [real1[0], real2[0], ai[0]]) previews.set(path(file), URL.createObjectURL(file));
-    imported.push({ id, realImages: [path(real1[0]), path(real2[0])], aiImage: { src: path(ai[0]), model }, enabled: true });
+  if (!groups.size) { status('请选择 questions 文件夹，每道题一个子文件夹，放一张 real.jpg 或 ai.jpg。'); return; }
+  clearPreviews(); const imported = [], warnings = [];
+  for (const [id, files] of [...groups].sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))) {
+    const images = files.filter(file => /^(real|ai)\.(jpg|jpeg|png|webp|avif)$/i.test(file.name));
+    if (images.length !== 1) { warnings.push(`${id}：每题需要且只能有一张 real 或 ai 图片，已跳过。`); continue; }
+    const file = images[0], src = `assets/questions/${id}/${file.name}`;
+    const question = { id, src, label: /^ai\./i.test(file.name) ? 'ai' : 'real', enabled: true };
+    const model = files.find(file => file.name === 'model.txt');
+    if (model) question.model = (await model.text()).trim();
+    previews.set(src, URL.createObjectURL(file)); imported.push(question);
   }
-  if (!imported.length) { status(warnings.join('\n') || '没有完整的题目。'); event.target.value = ''; return; }
-  questions = imported; render();
-  const missing = imported.filter(q => !q.aiImage.model).length;
-  status(`已导入 ${questions.length} 道题。${missing ? `请补全 ${missing} 道题的生成模型。` : '模型名称已就绪，可以导出。'}${warnings.length ? '\n' + warnings.join('\n') : ''}`);
-  event.target.value = '';
+  questions = imported; page = 0; render();
+  status(`已导入 ${questions.length} 道单图题。\n${warnings.join('\n')}`); event.target.value = '';
 });
 $('json-input').addEventListener('change', async event => {
   const file = event.target.files[0]; if (!file) return;
-  try {
-    const bank = JSON.parse(await file.text());
-    if (!Array.isArray(bank.questions)) throw new Error('配置需要包含 questions 数组。');
-    const normalized = bank.questions.map(q => ({ id: String(q.id || ''), realImages: Array.isArray(q.realImages) ? q.realImages.slice(0, 2) : ['', ''], aiImage: { src: q.aiImage?.src || '', model: q.aiImage?.model || '' }, enabled: q.enabled !== false }));
-    clearPreviews(); questions = normalized; render();
-    status(`已导入 ${questions.length} 道题。${bank.demo ? '这是演示配置；导出正式配置前，请替换图片和模型名称。' : ''}`);
-  } catch (error) { status('导入失败：' + error.message); }
+  try { acceptBank(JSON.parse(await file.text())); } catch (error) { status('导入失败：' + error.message); }
   event.target.value = '';
 });
+$('search').addEventListener('input', () => { page = 0; render(); });
+$('previous').addEventListener('click', () => { page--; render(); });
+$('following').addEventListener('click', () => { page++; render(); });
 $('add').addEventListener('click', () => {
   let number = questions.length + 1;
   while (questions.some(q => q.id === `q${String(number).padStart(3, '0')}`)) number++;
   const id = `q${String(number).padStart(3, '0')}`;
-  questions.push({ id, realImages: [`assets/questions/${id}/real-1.jpg`, `assets/questions/${id}/real-2.jpg`], aiImage: { src: `assets/questions/${id}/ai.jpg`, model: '' }, enabled: true });
-  render(); status('已添加题目，请确认图片路径并填写生成模型。');
+  questions.unshift({ id, src: `assets/questions/${id}/real.jpg`, label: 'real', enabled: true });
+  $('search').value = ''; page = 0; render(); status('已添加题目，请确认图片路径和真假标签。');
 });
 $('export').addEventListener('click', () => {
-  const bank = { demo: false, questions };
+  const bank = { version: 2, demo: false, questions };
   const { valid, errors } = validateBank(bank);
-  if (!valid.length || errors.length) { status('请先修正以下内容：\n' + (errors.join('\n') || '至少需要一道启用的题目。')); return; }
-  if (valid.some(q => q.aiImage.model.includes('占位') || q.realImages.some(src => src.startsWith('assets/demo/')) || q.aiImage.src.startsWith('assets/demo/'))) { status('检测到演示素材或占位模型。请先替换为正式图片及模型名称，再导出正式题库。'); return; }
+  if (!valid.length || errors.length) { status('请先修正：\n' + (errors.join('\n') || '至少需要一道启用题目。')); return; }
+  if (valid.some(q => q.src.startsWith('assets/demo/') || q.model?.includes('占位'))) { status('请先替换演示素材和占位模型。'); return; }
   const url = URL.createObjectURL(new Blob([JSON.stringify(bank, null, 2) + '\n'], { type: 'application/json' }));
   const a = el('a'); a.href = url; a.download = 'questions.json'; a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  status(`已导出 ${valid.length} 道启用题目。请将下载文件替换到 data/questions.json，并运行 npm run check 检查图片文件。`);
+  status(`已导出 ${valid.length} 道启用题目，请替换 data/questions.json 后运行 npm run check。`);
 });
+render();

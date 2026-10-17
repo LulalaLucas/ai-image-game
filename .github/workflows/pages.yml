@@ -21,6 +21,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: 下载题库图片
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download question-bank-20261017 --repo "${{ github.repository }}" --pattern question-images.zip --dir "$RUNNER_TEMP"
+          unzip -q "$RUNNER_TEMP/question-images.zip" -d "$GITHUB_WORKSPACE"
       - name: 检查题库和游戏逻辑
         run: |
           npm run check
