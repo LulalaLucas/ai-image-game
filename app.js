@@ -142,19 +142,22 @@ function finishAnswer(index) {
     const button = $(`answer-${i}`), card = $(`option-card-${i}`);
     button.setAttribute('aria-pressed', String(chosen));
     button.classList.toggle('chosen', chosen);
-    if (option.label === 'ai') {
-      const verdict = question.correct ? 'correct-choice' : 'wrong-choice';
+    const isAI = option.label === 'ai';
+    if (isAI || chosen) {
+      const verdict = isAI ? 'correct-choice' : 'wrong-choice';
       card.classList.add(verdict, 'reveal-answer'); button.classList.add(verdict);
-      const mark = node('span', `reveal-mark ${question.correct ? 'good' : 'bad'}`);
+    }
+    if (chosen || (question.timedOut && isAI)) {
+      const mark = node('span', `reveal-mark ${isAI ? 'good' : 'bad'}`);
       mark.setAttribute('aria-hidden', 'true');
       const symbol = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       symbol.setAttribute('viewBox', '0 0 24 24');
       const path = document.createElementNS(symbol.namespaceURI, 'path');
-      path.setAttribute('d', question.correct ? 'm5 12 4.5 4.5L19 7' : 'M12 5v9m0 4h.01');
+      path.setAttribute('d', isAI ? 'm5 12 4.5 4.5L19 7' : 'm6 6 12 12M18 6 6 18');
       symbol.append(path); mark.append(symbol); $(`picture-${i}`).append(mark);
     }
     button.children[1].textContent = chosen ? '你的选择' : option.label === 'ai' ? '正确答案' : '真实照片';
-    const badgeVerdict = option.label === 'ai' ? question.correct ? 'good' : 'bad' : 'neutral';
+    const badgeVerdict = isAI ? 'good' : chosen ? 'bad' : 'neutral';
     $(`picture-${i}`).append(node('span', `answer-badge ${badgeVerdict}`, labelText(option.label)));
   });
   const feedback = $('feedback');
@@ -184,7 +187,8 @@ function showResult() {
     item.append(node('h3', '', `第 ${i + 1} 题 · ${outcome}`));
     const images = node('div', 'review-images');
     question.options.forEach((option, index) => {
-      const figure = node('figure', `${question.selected === index ? 'selected' : ''} ${option.label === 'ai' ? 'answer-image' : ''}`);
+      const selected = question.selected === index;
+      const figure = node('figure', `${selected ? 'selected' : ''} ${option.label === 'ai' ? 'answer-image' : selected ? 'wrong-selection' : ''}`);
       const image = node('img'); image.src = option.src; image.alt = `第 ${i + 1} 题 ${letter(index)}：${labelText(option.label)}`;
       figure.append(image, node('figcaption', '', `${letter(index)} · ${labelText(option.label)}${question.selected === index ? '（你选的）' : ''}`));
       images.append(figure);
