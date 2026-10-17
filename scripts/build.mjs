@@ -17,9 +17,13 @@ if (!app.includes(`from './game.js?v=${gameVersion}'`)) throw new Error('未找�
 await writeFile(new URL('app.js', dist), app);
 const appVersion = version(app);
 const styleVersion = version(await readFile(new URL('style.css', dist)));
-const html = (await readFile(new URL('index.html', dist), 'utf8'))
+let html = (await readFile(new URL('index.html', dist), 'utf8'))
   .replace('src="./app.js"', `src="./app.js?v=${appVersion}"`)
   .replace('href="./style.css"', `href="./style.css?v=${styleVersion}"`);
+for (const name of ['game-icon.png', 'game-icon.svg']) {
+  const iconVersion = version(await readFile(new URL(`assets/${name}`, dist)));
+  html = html.replace(`href="./assets/${name}"`, `href="./assets/${name}?v=${iconVersion}"`);
+}
 await writeFile(new URL('index.html', dist), html);
 await writeFile(new URL('.nojekyll', dist), '');
 console.log('静态网站已生成至 dist/，可直接部署到 GitHub Pages。');
