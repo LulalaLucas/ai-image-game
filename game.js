@@ -39,8 +39,9 @@ export function validateBank(bank) {
   return { valid, errors };
 }
 
+export const QUESTION_SECONDS = 10;
+
 export function createRound(questions, random = Math.random, seenIds = new Set(), previousIds = new Set()) {
-  const size = Math.min(ROUND_SIZE, questions.length);
   const prioritize = items => [
     ...shuffle(items.filter(q => !seenIds.has(q.id) && !previousIds.has(q.id)), random),
     ...shuffle(items.filter(q => seenIds.has(q.id) && !previousIds.has(q.id)), random),
@@ -48,18 +49,29 @@ export function createRound(questions, random = Math.random, seenIds = new Set()
   ];
   const ai = prioritize(questions.filter(q => q.label === 'ai'));
   const real = prioritize(questions.filter(q => q.label === 'real'));
-  const targetAI = Math.ceil(size / 2);
-  const selected = [...ai.slice(0, targetAI), ...real.slice(0, size - targetAI)];
-  if (selected.length < size) {
-    const ids = new Set(selected.map(q => q.id));
-    selected.push(...prioritize(questions.filter(q => !ids.has(q.id))).slice(0, size - selected.length));
-  }
-  return shuffle(selected, random).map(question => ({ ...question, selected: null, correct: null }));
+  const size = Math.min(ROUND_SIZE, ai.length, real.length);
+  return Array.from({ length: size }, (_, i) => ({
+    options: shuffle([ai[i], real[i]], random),
+    selected: null,
+    answered: false,
+    correct: null,
+    timedOut: false
+  }));
 }
 
-export function answerQuestion(question, label) {
-  if (question.selected !== null || !['real', 'ai'].includes(label)) return null;
-  question.selected = label;
-  question.correct = question.label === label;
+export function answerQuestion(question, index) {
+  if (question.answered || !Number.isInteger(index) || !question.options[index]) return null;
+  question.selected = index;
+  question.answered = true;
+  question.correct = question.options[index].label === 'ai';
   return question.correct;
+}
+
+export function expireQuestion(question) {
+  if (question.answered) return false;
+  question.answered = true;
+  question.selected = null;
+  question.correct = false;
+  question.timedOut = true;
+  return true;
 }

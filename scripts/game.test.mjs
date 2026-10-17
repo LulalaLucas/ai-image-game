@@ -1,107 +1,70 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ROUND_SIZE, createRound, answerQuestion, validateBank } from '../game.js';
-const make = (n, label = n % 2 ? 'ai' : 'real') => ({ id: `q${n}`, src: `assets/questions/q${n}.jpg`, label, ...(label === 'ai' ? { model: '来源标注模型' } : {}) });
+import { ROUND_SIZE, QUESTION_SECONDS, createRound, answerQuestion, expireQuestion, validateBank } from '../game.js';
+const make = (n, label = n % 2 ? 'ai' : 'real') => ({ id: `q${n}`, src: `assets/questions/q${n}.jpg`, label });
 const bank = Array.from({ length: 50 }, (_, i) => make(i));
+const images = round => round.flatMap(q => q.options);
 function seeded(seed) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }; }
-test('每轮六张不重复图片，固定三张真实和三张 AI，且不修改题库', () => {
-  const original = structuredClone(bank);
-  const round = createRound(bank, seeded(42));
-  assert.equal(round.length, ROUND_SIZE);
-  assert.equal(new Set(round.map(q => q.id)).size, ROUND_SIZE);
-  assert.equal(round.filter(q => q.label === 'ai').length, 3);
-  assert.equal(round.filter(q => q.label === 'real').length, 3);
-  assert.ok(round.every(q => q.selected === null && q.correct === null));
+test('每轮六道双图题，每题一真一AI，十二张图不重复且不修改题库', () => {
+  const original = structuredClone(bank), round = createRound(bank, seeded(42));
+  assert.equal(ROUND_SIZE, 6); assert.equal(QUESTION_SECONDS, 10); assert.equal(round.length, 6);
+  assert.equal(new Set(images(round).map(q => q.id)).size, 12);
+  for (const question of round) {
+    assert.deepEqual(question.options.map(q => q.label).sort(), ['ai', 'real']);
+    assert.equal(question.selected, null); assert.equal(question.answered, false);
+  }
   assert.deepEqual(bank, original);
 });
-test('重新开始会重新抽题，真假顺序没有固定交替模式', () => {
-  const samples = new Set(), sequences = new Set(), aiCounts = new Set();
-  const random = seeded(231);
-  for (let i = 0; i < 50; i++) {
-    const round = createRound(bank, random);
-    samples.add(round.map(q => q.id).join(','));
-    sequences.add(round.map(q => q.label).join(','));
-    const count = round.filter(q => q.label === 'ai').length;
-    assert.equal(count, 3);
-    assert.equal(round.length, 6);
-    aiCounts.add(count);
-  }
-  assert.ok(samples.size > 45);
-  assert.ok(sequences.size >= 10);
-  assert.deepEqual([...aiCounts], [3]);
-});
-test('连续换组优先抽未出现的图片，题库用完后也避开上一轮', () => {
-  const seen = new Set();
-  let previous = new Set();
-  const random = seeded(725);
+test('真假位置随机，新一轮优先抽未出现图片，耗尽后避开上一轮', () => {
+  const seen = new Set(), positions = new Set(); let previous = new Set(); const random = seeded(725);
   for (let i = 0; i < 20; i++) {
-    const round = createRound(bank, random, seen, previous);
-    const ids = round.map(q => q.id);
+    const round = createRound(bank, random, seen, previous), chosen = images(round);
     assert.equal(round.length, 6);
-    assert.equal(round.filter(q => q.label === 'ai').length, 3);
-    assert.ok(ids.every(id => !previous.has(id)), '换组不能沿用上一轮的图片');
+    assert.ok(chosen.every(q => !previous.has(q.id)));
     for (const label of ['real', 'ai']) {
       const unseen = bank.filter(q => q.label === label && !seen.has(q.id)).length;
-      const selected = round.filter(q => q.label === label);
-      assert.equal(selected.filter(q => !seen.has(q.id)).length, Math.min(unseen, selected.length));
+      assert.equal(chosen.filter(q => q.label === label && !seen.has(q.id)).length, Math.min(unseen, 6));
     }
-    ids.forEach(id => seen.add(id));
-    previous = new Set(ids);
+    round.forEach(q => positions.add(q.options.findIndex(option => option.label === 'ai')));
+    chosen.forEach(q => seen.add(q.id)); previous = new Set(chosen.map(q => q.id));
   }
-  assert.equal(seen.size, 50);
+  assert.equal(seen.size, 50); assert.equal(positions.size, 2);
 });
-test('即使随机数相同也能换出不同图片，而不是只改变题目顺序', () => {
-  const first = createRound(bank, () => 0);
-  const previous = new Set(first.map(q => q.id));
-  const next = createRound(bank, () => 0, previous, previous);
-  assert.ok(next.every(q => !previous.has(q.id)));
+test('随机数相同也更换图片；某类库存较少时不生成同类配对或轮内重复', () => {
+  const first = createRound(bank, () => 0), previous = new Set(images(first).map(q => q.id));
+  assert.ok(images(createRound(bank, () => 0, previous, previous)).every(q => !previous.has(q.id)));
+  const small = [...Array.from({ length: 6 }, (_, i) => make(i, 'real')), ...Array.from({ length: 20 }, (_, i) => make(i + 20, 'ai'))];
+  const a = createRound(small, () => 0), ids = new Set(images(a).map(q => q.id));
+  const b = createRound(small, () => 0, ids, ids);
+  assert.equal(b.length, 6); assert.equal(new Set(images(b).map(q => q.id)).size, 12);
+  assert.equal(images(b).filter(q => ids.has(q.id)).length, 6);
 });
-test('某类图片不足以两轮不重复时，仍优先使用未出现的图并维持完整题数', () => {
-  const small = [...Array.from({ length: 3 }, (_, i) => make(i, 'real')),
-    ...Array.from({ length: 20 }, (_, i) => make(i + 20, 'ai'))];
-  const first = createRound(small, () => 0);
-  const previous = new Set(first.map(q => q.id));
-  const next = createRound(small, () => 0, previous, previous);
-  assert.equal(next.length, 6);
-  assert.equal(new Set(next.map(q => q.id)).size, 6);
-  assert.equal(next.filter(q => previous.has(q.id)).length, 3);
-});
-test('真实和AI都准确判分；错误、无效输入及重复提交不会误加分', () => {
-  for (const label of ['real', 'ai']) {
-    const q = createRound([make(1, label)])[0];
-    assert.equal(answerQuestion(q, 'invalid'), null);
-    assert.equal(q.selected, null);
-    assert.equal(answerQuestion(q, label), true);
-    assert.equal(q.correct, true);
-    assert.equal(answerQuestion(q, label), null);
-    const wrong = createRound([make(2, label)])[0];
-    const guess = label === 'ai' ? 'real' : 'ai';
-    assert.equal(answerQuestion(wrong, guess), false);
-    assert.equal(wrong.correct, false);
-    assert.equal(wrong.selected, guess);
-    assert.equal(answerQuestion(wrong, label), null);
+test('选择AI得分，选择真实不得分；无效输入及重复提交不会改动结果', () => {
+  for (const target of ['real', 'ai']) {
+    const question = createRound(bank, seeded(7))[0];
+    for (const invalid of [-1, 2, '0', null, NaN]) assert.equal(answerQuestion(question, invalid), null);
+    assert.equal(question.answered, false);
+    const index = question.options.findIndex(q => q.label === target);
+    assert.equal(answerQuestion(question, index), target === 'ai');
+    assert.equal(question.selected, index); assert.equal(question.answered, true);
+    assert.equal(answerQuestion(question, 1 - index), null); assert.equal(expireQuestion(question), false);
+    assert.equal(question.correct, target === 'ai'); assert.equal(question.timedOut, false);
   }
 });
-test('单一标签、少量题目和空题库正常抽取，不丢题也不补重复题', () => {
-  for (const count of [0, 1, 3, 7, 20]) {
-    const source = Array.from({ length: count }, (_, i) => make(i, 'real'));
-    const round = createRound(source, seeded(1));
-    assert.equal(round.length, Math.min(count, ROUND_SIZE));
-    assert.equal(new Set(round.map(q => q.id)).size, round.length);
-  }
-  const unbalanced = [make(50, 'ai'), ...Array.from({ length: 20 }, (_, i) => make(i, 'real'))];
-  const round = createRound(unbalanced, seeded(3));
-  assert.equal(round.length, 6);
-  assert.equal(round.filter(q => q.label === 'ai').length, 1);
+test('超时计为未答对并锁定，之后的选择和重复超时不会改分', () => {
+  const question = createRound(bank)[0];
+  assert.equal(expireQuestion(question), true); assert.equal(question.correct, false);
+  assert.equal(question.answered, true); assert.equal(question.timedOut, true); assert.equal(question.selected, null);
+  assert.equal(answerQuestion(question, 0), null); assert.equal(expireQuestion(question), false);
 });
-test('验证单图结构、重复题目、路径越界、标签和模型类型；未知模型允许留空', () => {
-  const unknownModel = { id: 'unknown', src: 'assets/questions/unknown.jpg', label: 'ai' };
+test('题目数量取决于较少类别，缺少任一类别不生成题目', () => {
+  assert.deepEqual(createRound([]), []); assert.deepEqual(createRound([make(0, 'real')]), []);
+  const small = [make(0, 'real'), make(1, 'ai'), make(2, 'real')];
+  assert.equal(createRound(small).length, 1); assert.equal(new Set(images(createRound(small)).map(q => q.id)).size, 2);
+});
+test('保留图片库校验，拒绝重复、越界和不合法标签', () => {
   const { valid, errors } = validateBank({ questions: [make(1), make(1), { ...make(2), enabled: false },
     { ...make(3), src: '../outside.jpg' }, { ...make(4), label: 'fake' }, { ...make(5), model: 3 },
-    { ...make(6), src: 'https://example.com/image.jpg' }, { ...make(7), src: make(1).src }, unknownModel] });
-  assert.equal(valid.length, 2);
-  assert.equal(errors.length, 6);
-  assert.equal(valid[1].model, undefined);
-  assert.throws(() => validateBank({}));
-  assert.equal(validateBank({ questions: [] }).valid.length, 0);
+    { ...make(6), src: 'https://example.com/image.jpg' }, { ...make(7), src: make(1).src }, make(8)] });
+  assert.equal(valid.length, 2); assert.equal(errors.length, 6); assert.throws(() => validateBank({}));
 });

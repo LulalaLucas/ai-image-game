@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#8c1c2d">
-  <meta name="description" content="是真实照片，还是 AI 生成？每轮六张图片，看看你能答对几张。">
+  <meta name="description" content="是真实照片，还是 AI 生成？每轮六题，每题两张图片，限时十秒找出 AI 生成的那张。">
   <title>真实，还是 AI？</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/game-icon.png"><link rel="icon" type="image/svg+xml" sizes="any" href="./assets/game-icon.svg">
   <link rel="stylesheet" href="./style.css">
@@ -13,8 +13,7 @@
 <body>
   <header class="site-header">
     <div class="brand">
-      <img class="brand-logo" src="./assets/event-logo.png" alt="北京大学校徽" width="52" height="52">
-      <div><div class="brand-school">北京大学计算机学院</div><div class="brand-event"><span>1024</span> 文化节</div></div>
+      <img class="school-logo" src="./assets/pku-cs-logo.png" alt="北京大学计算机学院" width="420" height="88">
     </div>
     <button class="reset-button" id="reset" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1.4 7M4 4v6h6"/></svg><span>重新开始</span></button>
   </header>
@@ -22,7 +21,7 @@
     <section class="introduction" aria-labelledby="title">
       <div class="eyebrow"><span class="tiny-dot"></span>AI 图片辨别挑战</div>
       <h1 id="title">真实，还是 <span>AI</span>？</h1>
-      <p class="instructions">仔细看看这张图片。<br class="mobile-break">它是真实拍摄，还是由 AI 生成？</p>
+      <p class="instructions">两张图片，一真一假。<br class="mobile-break">请在 10 秒内选出 AI 生成的那张。</p>
     </section>
     <section id="game" class="game" aria-label="图片辨识游戏" aria-busy="true">
       <div class="round-bar">
@@ -30,16 +29,27 @@
         <div id="progress" class="progress" aria-label="答题进度"></div>
         <div class="score">答对 <strong id="score">0</strong> 题</div>
       </div>
-      <article id="image-card" class="image-card">
-        <button id="picture" class="picture-button" type="button" aria-label="放大查看当前图片">
-          <img id="question-image" class="loading" alt="待判断的图片" decoding="async" draggable="false">
-          <span id="image-loading" class="image-loading">图片加载中…</span>
-          <span class="expand-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg></span>
-        </button>
-      </article>
-      <div id="judgment" class="judgment" role="group" aria-label="判断是真实照片还是 AI 生成">
-        <button id="answer-real" class="judgment-button real-button" type="button" disabled><span>真实照片</span><small>REAL · R / ←</small></button>
-        <button id="answer-ai" class="judgment-button ai-button" type="button" disabled><span>AI 生成</span><small>AI · A / →</small></button>
+      <div class="timer-panel" id="timer-panel">
+        <div class="timer-label"><span id="timer-status">图片加载后开始计时</span><span class="timer-value"><strong id="timer">10</strong><small>秒</small></span></div>
+        <div class="timer-track" aria-hidden="true"><div id="timer-fill" class="timer-fill"></div></div>
+      </div>
+      <div id="choices" class="choices" role="group" aria-label="选择 AI 生成的图片">
+        <article id="option-card-0" class="option-card">
+          <button id="picture-0" class="picture-button" type="button" aria-label="放大查看图片 A" disabled>
+            <img id="question-image-0" class="loading" alt="待判断的图片 A" decoding="async" draggable="false">
+            <span id="image-loading-0" class="image-loading">图片加载中…</span>
+            <span class="expand-icon" aria-hidden="true">＋</span>
+          </button>
+          <button id="answer-0" class="choice-button" type="button" disabled><span class="choice-letter">A</span><span>选这张</span><small>← / 1</small></button>
+        </article>
+        <article id="option-card-1" class="option-card">
+          <button id="picture-1" class="picture-button" type="button" aria-label="放大查看图片 B" disabled>
+            <img id="question-image-1" class="loading" alt="待判断的图片 B" decoding="async" draggable="false">
+            <span id="image-loading-1" class="image-loading">图片加载中…</span>
+            <span class="expand-icon" aria-hidden="true">＋</span>
+          </button>
+          <button id="answer-1" class="choice-button" type="button" disabled><span class="choice-letter">B</span><span>选这张</span><small>→ / 2</small></button>
+        </article>
       </div>
       <div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
       <div class="action-bar">
@@ -52,11 +62,11 @@
     <div id="error" class="error-box" role="alert" hidden></div>
     <p id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
   </main>
-  <footer>看不准时，可以放大图片看看细节。</footer>
+  <footer>每题仅有一张 AI 图片 · 答对得 1 分，超时不得分</footer>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title">
     <div class="lightbox-toolbar"><span id="lightbox-title">查看图片</span><div class="zoom-controls"><button id="zoom-out" type="button" aria-label="缩小">−</button><button id="zoom-reset" type="button" aria-label="恢复适合屏幕大小">100%</button><button id="zoom-in" type="button" aria-label="放大">＋</button><button id="close-lightbox" class="close-button" type="button" aria-label="关闭放大图片">×</button></div></div>
     <div id="lightbox-stage" class="lightbox-stage"><div id="lightbox-canvas"><img id="large-image" alt="放大图片"></div></div>
-    <div class="lightbox-bottom">使用 ＋ / − 查看细节 · 按 Esc 关闭</div>
+    <div class="lightbox-bottom">放大查看时仍会计时 · 按 Esc 返回答题</div>
   </dialog>
 </body>
 </html>
