@@ -5,10 +5,10 @@ const make = (n, label = n % 2 ? 'ai' : 'real') => ({ id: `q${n}`, src: `assets/
 const bank = Array.from({ length: 50 }, (_, i) => make(i));
 const images = round => round.flatMap(q => q.options);
 function seeded(seed) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }; }
-test('每轮六道双图题，每题一真一AI，十二张图不重复且不修改题库', () => {
+test('每轮五道双图题，每题一真一AI，十张图不重复且不修改题库', () => {
   const original = structuredClone(bank), round = createRound(bank, seeded(42));
-  assert.equal(ROUND_SIZE, 6); assert.equal(QUESTION_SECONDS, 10); assert.equal(round.length, 6);
-  assert.equal(new Set(images(round).map(q => q.id)).size, 12);
+  assert.equal(ROUND_SIZE, 5); assert.equal(QUESTION_SECONDS, 15); assert.equal(round.length, 5);
+  assert.equal(new Set(images(round).map(q => q.id)).size, 10);
   for (const question of round) {
     assert.deepEqual(question.options.map(q => q.label).sort(), ['ai', 'real']);
     assert.equal(question.selected, null); assert.equal(question.answered, false);
@@ -19,11 +19,11 @@ test('真假位置随机，新一轮优先抽未出现图片，耗尽后避开�
   const seen = new Set(), positions = new Set(); let previous = new Set(); const random = seeded(725);
   for (let i = 0; i < 20; i++) {
     const round = createRound(bank, random, seen, previous), chosen = images(round);
-    assert.equal(round.length, 6);
+    assert.equal(round.length, 5);
     assert.ok(chosen.every(q => !previous.has(q.id)));
     for (const label of ['real', 'ai']) {
       const unseen = bank.filter(q => q.label === label && !seen.has(q.id)).length;
-      assert.equal(chosen.filter(q => q.label === label && !seen.has(q.id)).length, Math.min(unseen, 6));
+      assert.equal(chosen.filter(q => q.label === label && !seen.has(q.id)).length, Math.min(unseen, 5));
     }
     round.forEach(q => positions.add(q.options.findIndex(option => option.label === 'ai')));
     chosen.forEach(q => seen.add(q.id)); previous = new Set(chosen.map(q => q.id));
@@ -36,8 +36,8 @@ test('随机数相同也更换图片；某类库存较少时不生成同类配�
   const small = [...Array.from({ length: 6 }, (_, i) => make(i, 'real')), ...Array.from({ length: 20 }, (_, i) => make(i + 20, 'ai'))];
   const a = createRound(small, () => 0), ids = new Set(images(a).map(q => q.id));
   const b = createRound(small, () => 0, ids, ids);
-  assert.equal(b.length, 6); assert.equal(new Set(images(b).map(q => q.id)).size, 12);
-  assert.equal(images(b).filter(q => ids.has(q.id)).length, 6);
+  assert.equal(b.length, 5); assert.equal(new Set(images(b).map(q => q.id)).size, 10);
+  assert.equal(images(b).filter(q => ids.has(q.id)).length, 4);
 });
 test('选择AI得分，选择真实不得分；无效输入及重复提交不会改动结果', () => {
   for (const target of ['real', 'ai']) {

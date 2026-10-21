@@ -199,6 +199,8 @@ function showResult() {
   const title = node('h2', '', `恭喜你一共答对了${state.score}题`); title.id = 'result-title';
   const score = node('div', 'result-score', String(state.score)); score.append(node('span', '', ` / ${state.round.length}`));
   const accuracy = node('p', 'result-accuracy', `正确率 ${Math.round(state.score / state.round.length * 100)}%`);
+  const tier = state.score >= 4 ? '二档' : state.score >= 1 ? '一档' : null;
+  const tierBadge = tier ? [node('p', 'result-tier', `本轮档次：${tier}`)] : [];
   const again = node('button', 'primary-button', '换一组图片 ↻'); again.type = 'button';
   again.addEventListener('click', () => { startRound(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
   const review = node('div', 'review-grid'); review.setAttribute('aria-label', '本轮答题回顾');
@@ -216,8 +218,8 @@ function showResult() {
     });
     item.append(images); review.append(item);
   });
-  result.replaceChildren(node('div', 'result-overline', '这一轮结束了'), title, score, accuracy, again, review);
-  result.hidden = false; announce(`本轮完成，答对 ${state.score} / ${state.round.length} 题。`);
+  result.replaceChildren(node('div', 'result-overline', '这一轮结束了'), title, score, ...tierBadge, accuracy, again, review);
+  result.hidden = false; announce(`本轮完成，答对 ${state.score} / ${state.round.length} 题${tier ? `，${tier}` : ''}。`);
   again.focus({ preventScroll: true }); window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 let fitWidth = 0, fitHeight = 0;

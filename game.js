@@ -1,4 +1,4 @@
-export const ROUND_SIZE = 6;
+export const ROUND_SIZE = 5;
 
 export function shuffle(items, random = Math.random) {
   const result = [...items];
@@ -39,7 +39,7 @@ export function validateBank(bank) {
   return { valid, errors };
 }
 
-export const QUESTION_SECONDS = 10;
+export const QUESTION_SECONDS = 15;
 
 export function createRound(questions, random = Math.random, seenIds = new Set(), previousIds = new Set()) {
   const prioritize = items => [
