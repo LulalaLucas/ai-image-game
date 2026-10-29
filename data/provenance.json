@@ -10,7 +10,8 @@
     "spotfaike_future": 21,
     "duplicate_images": 1,
     "low_resolution": 214,
-    "user_requested": 1
+    "user_requested": 1,
+    "flags_and_national_symbols": 110
   },
   "downloadFailures": [],
   "duplicates": [
@@ -20,8 +21,8 @@
     }
   ],
   "labelCounts": {
-    "ai": 557,
-    "real": 354
+    "ai": 508,
+    "real": 293
   },
   "images": [
     {
@@ -42,16 +43,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0005",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_0ffc3d45896c84ba4006996b8c9269c3_20230926_154012_376010_AWS_Titan.jpg",
-      "sha256": "8a88932f7dced93424bbac356e7de54b201df00ad6f4c75c764691b3c575f053",
-      "bytes": 340071,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
       "height": 450
     },
     {
@@ -82,16 +73,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 750,
-      "height": 450
-    },
-    {
-      "id": "ron-0010",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_1072981191694360958320gettyimages1619910885AFP33TE8Y7_20230911_085029_765114_AWS_Titan.jpg",
-      "sha256": "22ec324aa3141d66823c275419ed9e9feadb3389ef05024625d1c6e276c3885c",
-      "bytes": 160407,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -139,16 +120,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_1073707871707401803611gettyimages1991486233mg7225infineum0102062024_20240213_103039_774209_AWS_Titan.jpg",
       "sha256": "50e026fa1ece92ecebee0125e01374af645a4e421fc5c6a4c9e68bf73879e095",
       "bytes": 173294,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0016",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_10dcdronesvtgwfacebookJumbo_20230810_142209_974201_AWS_Titan.jpg",
-      "sha256": "e133f2a85389bc9f3105e870a72b8061f80943f66b77770a5f7f6d7a79ff26d8",
-      "bytes": 192427,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -222,16 +193,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0025",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_13ukraineeast01qjkbfacebookJumbo_20240114_092923_469446_AWS_Titan.jpg",
-      "sha256": "c334191ea32091347c068eaaeb347774db8fb804a5592f142df31e105656e1e7",
-      "bytes": 269567,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 750,
       "height": 450
     },
     {
@@ -369,16 +330,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_230809053716kupyansk062023supertease_20230810_142145_533408_AWS_Titan.jpg",
       "sha256": "27e9aec36efe7d5aac0588e47e62e06cddf844cdbe0bc00849ccfbb473f69e33",
       "bytes": 199144,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0045",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_230925094835capitolbuildingclouds_20230926_153908_279785_AWS_Titan.jpg",
-      "sha256": "40e0d021136d6b3022e096a484d47693885104924867e9e366ed9bb75c19a1cb",
-      "bytes": 153161,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -555,16 +506,6 @@
       "height": 450
     },
     {
-      "id": "ron-0069",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_5242325007SIUEFlags_20240122_122448_291365_AWS_Titan.jpg",
-      "sha256": "0556fa3c3b87ee9bb945fb4f1434ac8f9298a6dc2ada73b6212fcf65f1dc9fc4",
-      "bytes": 119659,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0070",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_5afbdef887fb46f48ea2fdd1bded7ad2large16x9CassieHarpDirectUploader6thOct20232327UTC_20231015_175831_178170_AWS_Titan.jpg",
       "sha256": "c54de4656df120a227befb0ef67e0a77689928d3c614cf5bd405977fba0e430b",
@@ -635,16 +576,6 @@
       "height": 450
     },
     {
-      "id": "ron-0077",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_6494d5209c8a9_20230627_083628_323920_AWS_Titan.jpg",
-      "sha256": "23e05af8eb038c227be5afda287ccd11b6ead09000f6b61c24a00a766df040ba",
-      "bytes": 253309,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0079",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_64c02e68bea34400196189ebwidth1200formatjpeg_20230726_094949_920271_AWS_Titan.jpg",
       "sha256": "05bd8a5907e1f37d8ad263378f272b8b791b61070b941ead07beae68f603132f",
@@ -662,16 +593,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 750,
-      "height": 450
-    },
-    {
-      "id": "ron-0082",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_650da51f12dc4f001a17c13dwidth1200formatjpeg_20230922_092804_437570_AWS_Titan.jpg",
-      "sha256": "baa601e4c21970b532dd44b2516acd850df58f63176deac98744cd9028e345fc",
-      "bytes": 273491,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
       "height": 450
     },
     {
@@ -765,26 +686,6 @@
       "height": 450
     },
     {
-      "id": "ron-0094",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_800623c16c81ede2890b6db015c92694_20231009_085346_557480_AWS_Titan.jpg",
-      "sha256": "b7bead83c813ccf120234d15ded30f7e891be607fadf21e21793089fb68fd3fa",
-      "bytes": 149466,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0095",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_842acdccb079aec07c1e08a30f8d1d2d_AWS_Titan.jpg",
-      "sha256": "c4a6f2e0e32b78f6178227c29a7a63d1818ae09f930e1306358e22c7ba425788",
-      "bytes": 214679,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0096",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_93943dbb558961ab85d86175abf42bbc_20240102_135938_218977_AWS_Titan.jpg",
       "sha256": "fd9a04f011eb149d681055999415b1ab9f5c24e49bfa791b623233a8103fb0b9",
@@ -819,26 +720,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_AA1cP5ZB_20230621_154346_051463_AWS_Titan.jpg",
       "sha256": "1190c24179470d1bb37c9466abdc513c0f79776c7efd3e9687448e1a5529fb19",
       "bytes": 209739,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0100",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_AA1cQxz3_20230621_154550_091137_AWS_Titan.jpg",
-      "sha256": "bc505504f924e93721a17c4c4db5124c43471f057f79ce8efca0047854a75fe2",
-      "bytes": 274248,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 750,
-      "height": 450
-    },
-    {
-      "id": "ron-0102",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_AA1cSa5T_20230622_135510_812159_AWS_Titan.jpg",
-      "sha256": "0470158c12e199ace7309c5fcc4fdb9731c620df57756d6449225f9cdb0e8ea3",
-      "bytes": 213124,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
@@ -1035,16 +916,6 @@
       "height": 450
     },
     {
-      "id": "ron-0126",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_BB1ic9n5_20240213_103017_058600_AWS_Titan.jpg",
-      "sha256": "2af94038a4742210c20ada9cf409de3afe68954fc0a4baceaac03dec29b300bb",
-      "bytes": 248506,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 750,
-      "height": 450
-    },
-    {
       "id": "ron-0127",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_BidenEndangeredSpecies15003_20230621_154431_187372_AWS_Titan.jpg",
       "sha256": "290fa5a7c5e10b17fdbc1f4b85fbcb62e2b97e5a1c2f90bfa2245e37a01ce017",
@@ -1062,16 +933,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0129",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_brandenburggate_20230926_154012_293036_AWS_Titan.jpg",
-      "sha256": "fcdbd3d85a0fbdc98f4384864104fd2c26e7b7b0cde7d8c1c8c4c4e4066ae2a0",
-      "bytes": 134446,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -1165,16 +1026,6 @@
       "height": 450
     },
     {
-      "id": "ron-0142",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_f4805212c76d922a28a4f6f3af6dab79_20230921_115953_368956_AWS_Titan.jpg",
-      "sha256": "71f07b06da03dd6441a5526821979845c0a2b1f58651b8c5d1f0e3708edc4b3f",
-      "bytes": 248056,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0143",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_flowersplacedlikeqiangsformerhouse_20231030_142103_092500_AWS_Titan.jpg",
       "sha256": "184d56acd7936396775865ac8f5b97f0ed00b287c9435b4efb56c8d555a1fcff",
@@ -1202,26 +1053,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0146",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_gettyimages-1497967570_AWS_Titan.jpg",
-      "sha256": "5ec55e7c114eef16016bc9649ad136c1187f572c7fbce49a49c48e37fa8a8cf2",
-      "bytes": 263062,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 750,
-      "height": 450
-    },
-    {
-      "id": "ron-0147",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_gettyimages1930881406copy_20240205_113715_836610_AWS_Titan.jpg",
-      "sha256": "e4259023751f20c901fe95d8b5b58d8b3166830b5cb2b7e1f0f70c6defbe96c9",
-      "bytes": 286160,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
       "height": 450
     },
     {
@@ -1439,16 +1270,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/dalle3_23091008592802ukrainedecoyweapons_20230911_085109_144349.jpg",
       "sha256": "fdf452db34c574b60757e73392bd65bdf37ed464ff27e4454c81b3c900b57c1e",
       "bytes": 193867,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0184",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/dalle3_23120121253501venezuelaessequiboreferendum_20231207_120459_533411.jpg",
-      "sha256": "524957645f72b65e3faacad7b349809997f166aabbb87c0fab822191959901a0",
-      "bytes": 182395,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -2055,16 +1876,6 @@
       "height": 450
     },
     {
-      "id": "ron-0266",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_flag_flying_in_front_of_a_buildingskycloudoutdoorfla_95b753eb-9b0c-44d0-a566-893ed428953f.png_top_left.jpg",
-      "sha256": "90bcd04a673ff6ea23fede0909614e4e172f2b89772c7e102695719a74aca790",
-      "bytes": 156194,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0267",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_group_of_bottles_of_winebottleindoorglass_bottledrin_8d2cf6fb-d170-42ad-a3e7-88d1caab289f.png_bottom_left.jpg",
       "sha256": "523dee3f26b5fc5a5d4f047ba85d55f5d536c5cace848592d87a272ee60e7b0e",
@@ -2105,30 +1916,10 @@
       "height": 450
     },
     {
-      "id": "ron-0271",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_group_of_flags_from_a_buildingflagbuildingflag_of_th_b4e5b659-2f6f-4a8d-a8d3-ef398c74224c.png_bottom_left.jpg",
-      "sha256": "88c26c11545bce631ae79c8478da018c381a2d1bdfdef6bc876e92ec4b232d10",
-      "bytes": 180081,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0272",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_group_of_men_holding_gunsskyweaponoutdoorriflefirear_545afa3f-37a8-4249-8d98-d085f65fef59.png_bottom_right.jpg",
       "sha256": "553f3fcb31b996901b67c91b690b28bd62911b1bb7d3084cd873fa8e31dc7e19",
       "bytes": 177319,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0279",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_group_of_people_holding_flagsclothingpersoneventwoma_e0331c44-3493-430b-9218-20b2bb542594.png_bottom_right.jpg",
-      "sha256": "05c3d5c59c99b608298bcd23fbda8060786fbf76844d5cc8de1a64d8a1d28e67",
-      "bytes": 165365,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -2675,16 +2466,6 @@
       "height": 450
     },
     {
-      "id": "ron-0356",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_soldier_loading_a_cargo_onto_a_military_vehiclecloth_5ddb3058-f253-4938-a9a7-21206508e3c1.png_bottom_left.jpg",
-      "sha256": "93b5ac9217e252c7db03379d028a49ea39f6a8193e8f79c9da50715204b9912d",
-      "bytes": 138017,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0357",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_soldier_loading_a_cargo_onto_a_military_vehiclecloth_5ddb3058-f253-4938-a9a7-21206508e3c1.png_top_left.jpg",
       "sha256": "daf1574306a81cf58c228a95e885e17552f985dc75666ffac5ebb137b11d562d",
@@ -2755,30 +2536,10 @@
       "height": 450
     },
     {
-      "id": "ron-0366",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_woman_speaking_into_a_microphonehuman_faceclothingpe_7dd16b54-abb0-49e2-bf27-81ff9f830efe.png_top_right.jpg",
-      "sha256": "44b92866ebc89d578ed3b268dbf883ec1bbe8224f48ef3f5592a2ff97f0cb00d",
-      "bytes": 113862,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0367",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_woman_speaking_into_a_microphonehuman_facemicrophone_ba190e7f-7283-43e6-bc89-1f069ad2dec3.png_top_left.jpg",
       "sha256": "bbcaf22030cddeab8dc9b8e06f85ed8381f19ca32f50be6cdd234ad8d6f8b0de",
       "bytes": 156493,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0369",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_woman_standing_at_a_podiumclothinghuman_facepersonmi_cdd4a659-cf67-4670-8913-545dcd9dd169.png_bottom_left.jpg",
-      "sha256": "4d6fb6bf79e138b8d83a2e3053d1eb06bab9a7a6c19bce50857bdfd07e5944a3",
-      "bytes": 134743,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
@@ -2875,40 +2636,10 @@
       "height": 450
     },
     {
-      "id": "ron-0381",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_Microsofts_Satya_Nadella_attending_a_meeting_in_Beijin_bcbea3d0-1db6-418e-997b-b9a92601261b.png_bottom_right.jpg",
-      "sha256": "2216fab4c632008d2c9971ba28c44095b1df9e50c4c002f33b34b42aa682b595",
-      "bytes": 107221,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0382",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_Microsofts_Satya_Nadella_attending_a_meeting_in_Beijin_bcbea3d0-1db6-418e-997b-b9a92601261b.png_top_right.jpg",
-      "sha256": "ba7cd8c4ec1c8d78cb3fd85ae3a5b690dd4ef210f1f0e47f780fc8aebf80e49f",
-      "bytes": 102749,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0383",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_personmilitary_organizationinfantryshotgunmantroopshoo_4b0b7ab8-e53e-4e8f-8417-dc16b0f5be1c.png_top_left.jpg",
       "sha256": "15b7261f07a7ec653623f5fd629b4834d45fda3f4a020afdb83a302950bd668a",
       "bytes": 131135,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0384",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_several_flags_in_front_of_a_buildingbuildingtextoutdoo_19cd8317-eadd-47d3-b996-7c25b42532ab.png_top_left.jpg",
-      "sha256": "c36b3e6bac3a0272f1229fa7321ec0448b66766c0525d57a6969cfe231d26e80",
-      "bytes": 204560,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -2975,16 +2706,6 @@
       "height": 450
     },
     {
-      "id": "ron-0391",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_natosummit2percentGettyImages1242052307e1687292289447_20230621_154354_919821_SDXL.jpg",
-      "sha256": "387c8bc6b8d04560367192712f83e2eff7ef73b27642816e23e043b0a42043cc",
-      "bytes": 158398,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 677,
-      "height": 450
-    },
-    {
       "id": "ron-0392",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_original_20231218_183620_402594_SDXL.jpg",
       "sha256": "ea92fb114b162618cc29190f051c76b39de6f5fa6267485678e96745041d2b75",
@@ -3015,16 +2736,6 @@
       "height": 450
     },
     {
-      "id": "ron-0395",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_politics1024x683_20240102_135847_763732_SDXL.jpg",
-      "sha256": "a08e9e48d774ddab54a35626c2748d9cb128ea7635afc8adf03b49df1109f79c",
-      "bytes": 170032,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 677,
-      "height": 450
-    },
-    {
       "id": "ron-0396",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_rawImage_20231218_183453_879218_SDXL.jpg",
       "sha256": "98879fdbe899cdfeb5f8092600f2a2d44bac5c3e1977b28821bc431038a4283d",
@@ -3045,16 +2756,6 @@
       "height": 450
     },
     {
-      "id": "ron-0398",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_rostovdonsubmarinepassingthroughbosphorusstrait_20230922_092749_244546_SDXL.jpg",
-      "sha256": "87b662d94208d0c82f837e2058384c753672e38f355b2a0747ded1f9a850327d",
-      "bytes": 231377,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 761,
-      "height": 450
-    },
-    {
       "id": "ron-0399",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_Russiaaccidentallybombsitsownvillage1_20240102_135945_530173_SDXL.jpg",
       "sha256": "c328cfe37f06c84d924ef94bffa194e74f4592a113a16f73b74b594b2a60d697",
@@ -3072,16 +2773,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "conflicting_folder_and_filename",
       "width": 704,
-      "height": 450
-    },
-    {
-      "id": "ron-0401",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_russiansoldierspatrolareacrimea_20230717_091120_403627_SDXL.jpg",
-      "sha256": "a13fd9355ccc8e3cb832ce739e6da102344c0c961f36a8f03c0940a42c70314d",
-      "bytes": 178170,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 608,
       "height": 450
     },
     {
@@ -3112,16 +2803,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "conflicting_folder_and_filename",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0405",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_social (1)_SDXL.jpg",
-      "sha256": "37ef14db57fa5cedf7d172321da76c99fd68c5002021ddaae026709db9a32b22",
-      "bytes": 208286,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 900,
       "height": 450
     },
     {
@@ -3195,16 +2876,6 @@
       "height": 450
     },
     {
-      "id": "ron-0413",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_social_20231226_161549_466672_SDXL.jpg",
-      "sha256": "0c23edad7dd55db48a8d3081ac3f3a40dbd4f44bd85ba5e4fa827fccaf0eb08d",
-      "bytes": 288353,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 900,
-      "height": 450
-    },
-    {
       "id": "ron-0414",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_social_20240102_135942_662394_SDXL.jpg",
       "sha256": "e31af945fc33674209a64dfef345498571f2e9a2a2e91c83062c866e8d857395",
@@ -3222,16 +2893,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "conflicting_folder_and_filename",
       "width": 900,
-      "height": 450
-    },
-    {
-      "id": "ron-0416",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_t34tankmoscow_20231020_093746_620697_SDXL.jpg",
-      "sha256": "887c889e4168ca324454ac34fc89d2de35d4788695df96e67c596cdc2cb40cd1",
-      "bytes": 243502,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 675,
       "height": 450
     },
     {
@@ -3515,16 +3176,6 @@
       "height": 450
     },
     {
-      "id": "ron-0461",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-flag-flying-in-front-of-a-building-flag-of-the-u.jpeg",
-      "sha256": "849b73818d0284127c813a023ee401daaf38f7b5c638ebd4db28720da7a18a7c",
-      "bytes": 151737,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0462",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-focused-image-of-an-elderly-man-sitting-down-and.jpeg",
       "sha256": "63a1b7ca571a7f04527ed74b02e0a0589453c75bfd7615ca86fcdbf4ad6ef605",
@@ -3562,26 +3213,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0469",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-men-in-military-uniforms-outdoor-clothi.jpeg",
-      "sha256": "ebfd7468ac58b802f8d51715ae9415b5383ca8e2c8e345132b095d21f7afbea5",
-      "bytes": 193147,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0471",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-men-in-military-uniforms-standing-on-a-.jpeg",
-      "sha256": "1397b424bdf42a125f1a6af620f268f35701d4d89113d7c6827b25c3dcb78cda",
-      "bytes": 198223,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 546,
       "height": 450
     },
     {
@@ -3625,26 +3256,6 @@
       "height": 450
     },
     {
-      "id": "ron-0478",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-people-holding-flags-and-waving-in-the-.jpeg",
-      "sha256": "8fda256be3ddb0244458039c5b08ac1fea1a88be053adc5ff87b9a3c6e787362",
-      "bytes": 197710,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0479",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-people-holding-flags-in-front-of-a-buil.jpeg",
-      "sha256": "96f4cf03282cf9d4f8d5d09de658c5631be0a132c05ddcd15b7409a53dbd484d",
-      "bytes": 369706,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
       "id": "ron-0482",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-people-in-a-circle-clothing-person-huma.jpeg",
       "sha256": "dc80d710614e223aeb9b4b4855ca251204d6f595ba9f08c57e165c6731db6dee",
@@ -3652,16 +3263,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0483",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-people-in-a-crowd-human-face-clothing-m.jpeg",
-      "sha256": "06aacb4b3be8514cd23bf93db93eea9d412ad77964dce6b2be9752d579889b5b",
-      "bytes": 145502,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -3782,16 +3383,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0502",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-soldiers-in-front-of-a-building-sky-out.jpeg",
-      "sha256": "be9abae4e5fc1d0af89e474a4e881ddf9a3fa548721e43340229000252a45b51",
-      "bytes": 301508,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 1080,
       "height": 450
     },
     {
@@ -3932,16 +3523,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 1080,
-      "height": 450
-    },
-    {
-      "id": "ron-0522",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-holding-a-flag-next-to-a-police-car-vehicle-.jpeg",
-      "sha256": "4263a3c82d2b41896febfdfb5a8f7bc7e6076e7e8b77f9094ed5b9180a8f40c8",
-      "bytes": 264201,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
       "height": 450
     },
     {
@@ -4095,16 +3676,6 @@
       "height": 450
     },
     {
-      "id": "ron-0551",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-standing-in-front-of-a-wall-with-a-bear-pain.jpeg",
-      "sha256": "c5e0e1dd7ddf405f84cf6ed44d149458fdc1bd41ce61e6b6109f3ba8c8349c68",
-      "bytes": 232905,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0552",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-standing-in-front-of-a-whiteboard-text-handw.jpeg",
       "sha256": "b29e68e03bb053c70c9233b64f8936436256af5657b0f340884ce4fd9b9cb90e",
@@ -4205,16 +3776,6 @@
       "height": 450
     },
     {
-      "id": "ron-0574",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-military-ship-in-the-water-with-flags-outdoor-sh.jpeg",
-      "sha256": "d51783066837990907e1fb8fb50454f517c4167583637b27d0b0a03fc6fd7055",
-      "bytes": 356850,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 1080,
-      "height": 450
-    },
-    {
       "id": "ron-0576",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-oil-rig-with-a-sunset-behind-it-cloud-sky-outdoo.jpeg",
       "sha256": "7f753ec8cc488b95f7b4bba10ee9af3b540b45872aa01d3149cb0c070436ab0f",
@@ -4255,30 +3816,10 @@
       "height": 450
     },
     {
-      "id": "ron-0580",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-person-holding-a-flag-over-a-coffin-flag-of-the-.jpeg",
-      "sha256": "2358820ba4d1467e0b704efe93dc7d7921c3d69e8f19df39cf42c19efb560dc3",
-      "bytes": 173442,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0581",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-person-in-a-blue-jacket-sky-clothing-person-outd.jpeg",
       "sha256": "fe3599a13231dda62e24c5bfd8208e1e1f706fde5b0b15b9258d2da35d48b7f7",
       "bytes": 166868,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0582",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-person-in-a-space-suit-clothing-pressure-suit-as.jpeg",
-      "sha256": "e208b245195861b56128e09e41c937d5187c7fc1c5dee13ad2603eb9da12dc9f",
-      "bytes": 217429,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
@@ -4392,16 +3933,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 1080,
-      "height": 450
-    },
-    {
-      "id": "ron-0597",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-rocket-launching-from-a-ship-transport-rocket-ou.jpeg",
-      "sha256": "83188f206053c6a4ad5d26b05a8aba8e1e55581aa3c3b0f8d44313bda9670550",
-      "bytes": 158898,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 546,
       "height": 450
     },
     {
@@ -4572,26 +4103,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0625",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-white-building-with-columns-and-a-flag-on-top-bu.jpeg",
-      "sha256": "1c4b3f26ad0370cd3eb62cc3c0af7875630c0946e175f5059a44c99ca18b7c74",
-      "bytes": 357665,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0626",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-white-building-with-columns-and-a-fountain-with-.jpeg",
-      "sha256": "080cc1b55b223de20509fa5fda65ad5c3f96a71b6c412ac874ff102ff282cb92",
-      "bytes": 370199,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
       "height": 450
     },
     {
@@ -5025,26 +4536,6 @@
       "height": 450
     },
     {
-      "id": "ron-0695",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/15204522655_6c95522e07_c.jpg",
-      "sha256": "bc13542e02bb52409e61afb23beb0e3dd71722b83e6c443445d4e52d98333c56",
-      "bytes": 293045,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 600,
-      "height": 450
-    },
-    {
-      "id": "ron-0696",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/15204774875_3efc72d0fd_c.jpg",
-      "sha256": "7306c1a20adff6de0c821a2c163d9b19427c5ec3e4cbde3d45aa18a2f41f98e2",
-      "bytes": 261290,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0697",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/15240239382_ba4ca36aff_c.jpg",
       "sha256": "669e4cf45f7f5f13c2b695f14247ec42a6d96fec1cd9878ce190c0a12f07d9d6",
@@ -5062,36 +4553,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 674,
-      "height": 450
-    },
-    {
-      "id": "ron-0700",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/15697495285_d5b52ee546_c.jpg",
-      "sha256": "ed79aaa42369044b1914f466bb2580bb94bf5d1fbf9edf0bc89faa80eccef7fe",
-      "bytes": 245528,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0701",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/16963884747_440f4b345c_c.jpg",
-      "sha256": "fcc18837d5dcb75b8bafb4a3b50fb5452a2eeb264b9d5cd6ff0a553dc13d11d7",
-      "bytes": 214904,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 581,
-      "height": 450
-    },
-    {
-      "id": "ron-0702",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/17132477702_3cbf7bd012_c.jpg",
-      "sha256": "97a359e36bd1701550d3f2d03a7d309a2e863f7763ffa3582d696a3cd14b5514",
-      "bytes": 233538,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 676,
       "height": 450
     },
     {
@@ -5165,16 +4626,6 @@
       "height": 450
     },
     {
-      "id": "ron-0710",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/17735206336_c551b76bd0_c.jpg",
-      "sha256": "f69c56717278dc06826a33cbe2931c9e32d18aab40eff3665e5307270a334e3c",
-      "bytes": 319368,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 687,
-      "height": 450
-    },
-    {
       "id": "ron-0711",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/17780181946_1f2c28becc_c.jpg",
       "sha256": "1ca0a142fa81102136b1ca1f3a0b82e8350633e1a89df14c81fe8d16adb3ed07",
@@ -5202,16 +4653,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 758,
-      "height": 450
-    },
-    {
-      "id": "ron-0714",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/18187544968_68bb987413_c.jpg",
-      "sha256": "04877fbda9823c0dc1b0246ff6b193f696deb0f62b7237842c4caa3b30f5760a",
-      "bytes": 310049,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 726,
       "height": 450
     },
     {
@@ -5292,16 +4733,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 656,
-      "height": 450
-    },
-    {
-      "id": "ron-0723",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/18579100013_c2c06130a7_c.jpg",
-      "sha256": "91d510680c8d31c1b953f5e213376951b36e829eeef58308e0b1e3ba8c7c41e2",
-      "bytes": 213971,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 742,
       "height": 450
     },
     {
@@ -5445,16 +4876,6 @@
       "height": 443
     },
     {
-      "id": "ron-0738",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/19460354721_15eac71c83_c.jpg",
-      "sha256": "b4aac0c915dfdc70addf99bb035630b3662e4a96561c86e33be0a1d1afd2c3c1",
-      "bytes": 267831,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 672,
-      "height": 450
-    },
-    {
       "id": "ron-0739",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/19591875462_98880d040c_c.jpg",
       "sha256": "fb010698120dd636e0eb539742c19cdb6f8ebf33ff35268a9273be570bf56d7e",
@@ -5535,16 +4956,6 @@
       "height": 450
     },
     {
-      "id": "ron-0748",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/24151117084_71efd4fa8f_c.jpg",
-      "sha256": "4f4612b3de33338fafa9f2c3e9d1d93dc455984c8b26441a39725fb4039e61c8",
-      "bytes": 152033,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 674,
-      "height": 450
-    },
-    {
       "id": "ron-0749",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/24152350193_a9ff208470_c.jpg",
       "sha256": "609c3246d7bb4ca2e5b6b8c67b5e8ef51f5ff774980cec6efbd772791ca4876f",
@@ -5589,16 +5000,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/24611959934_484903593c_c.jpg",
       "sha256": "f57a55dfdd7f7027defdc3656f209434ac07c4f0fb9adb6a368dbde08d4852ed",
       "bytes": 211537,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0754",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/24789301603_899301f79f_c.jpg",
-      "sha256": "f0fe463faf2385577d12092631676ae4b59dd9c0bfd4ee4833ceb3ed8442288c",
-      "bytes": 239722,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
@@ -5675,16 +5076,6 @@
       "height": 450
     },
     {
-      "id": "ron-0762",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/24984423833_24ba08aa96_c.jpg",
-      "sha256": "81a90f8f355a7c46532aa1eef1d8d282c46e6d4e99ccb04943f4c50c2d9b8618",
-      "bytes": 152101,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 630,
-      "height": 450
-    },
-    {
       "id": "ron-0763",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/25120404650_4fbeb3627d_c.jpg",
       "sha256": "d5be4dc3de26c3f0514cba2c209341a941efeef27d128fd68762aa61678c22b3",
@@ -5749,16 +5140,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/25611136175_8f4c058eea_c.jpg",
       "sha256": "310f93142e83901a19c92729e908c4b02d9d804df14269f167602f479f3937b0",
       "bytes": 164738,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0770",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/25611137395_d3e98c40d0_c.jpg",
-      "sha256": "d7c07870628fb1045715908b733d38918b8af46d346c445d72b1df2bf3cffacb",
-      "bytes": 164606,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
@@ -6185,16 +5566,6 @@
       "height": 450
     },
     {
-      "id": "ron-0816",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/32405585600_5117b5a874_c.jpg",
-      "sha256": "cfaa51ff27ad6d2b9ba477bafb6028d4ea4fbd1dce19d521d65eeb9d16740827",
-      "bytes": 331484,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 800,
-      "height": 450
-    },
-    {
       "id": "ron-0817",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/32563919104_2a4aaafba4_c.jpg",
       "sha256": "0c959a0ecc436cad55bc2f09efc4088922ea1681497b2f9d92d39d91bd07b6e8",
@@ -6252,26 +5623,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 706,
-      "height": 450
-    },
-    {
-      "id": "ron-0824",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/33960135374_e4aea14b63_c.jpg",
-      "sha256": "5006c60027a89896b22973668180742e91a5d447ecc537a0f9f7f567ddb23fde",
-      "bytes": 158767,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 673,
-      "height": 450
-    },
-    {
-      "id": "ron-0825",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/34777073680_be11eb0167_c.jpg",
-      "sha256": "a3f4a403f3f42360b44e725febfa25d0f3119b2ff3cd47920c23121752d8bb07",
-      "bytes": 295718,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 673,
       "height": 450
     },
     {
@@ -6395,16 +5746,6 @@
       "height": 450
     },
     {
-      "id": "ron-0861",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/40179450653_fb1dce7cf0_c.jpg",
-      "sha256": "55980c2fbe18f5194e0364cc22be805bb6007766725ffd2317e63feb4d754221",
-      "bytes": 205382,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 656,
-      "height": 450
-    },
-    {
       "id": "ron-0863",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/41431192250_5ab1e7bbe0_c.jpg",
       "sha256": "8c9c06a0cfc457cbae977b1273fe09f7c4acd8170d6969774274d1c08415b53b",
@@ -6505,16 +5846,6 @@
       "height": 450
     },
     {
-      "id": "ron-0873",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/43571262881_4c2850e82e_c.jpg",
-      "sha256": "4c392a324523ffa7fd7c3a58f00acb3ac0f1ae28553877648d8a8362b26ea0d4",
-      "bytes": 251790,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 800,
-      "height": 450
-    },
-    {
       "id": "ron-0874",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/43571803271_242e539a7e_c.jpg",
       "sha256": "0671c2e81eb9be15c24293d0f08dac21fab4298d538f9a3ef9f919052fdcfff2",
@@ -6545,16 +5876,6 @@
       "height": 450
     },
     {
-      "id": "ron-0877",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/46515268971_cf27dc3756_c.jpg",
-      "sha256": "c1d0f1a5c8877376e9523e6f431a35968d649663ecf0a8c9974021278e004e7b",
-      "bytes": 194481,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 679,
-      "height": 450
-    },
-    {
       "id": "ron-0879",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/47706476191_70fc98c8e6_c.jpg",
       "sha256": "25fb3259f25d6fce899ae756c44b7a150946ffa2b78e8e42059efaffc23e9569",
@@ -6562,16 +5883,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 668,
-      "height": 450
-    },
-    {
-      "id": "ron-0880",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/4806454696_cb55673c8c_c.jpg",
-      "sha256": "b2629a69c5802b3385cca90275951a40d90cfb9bf64b89f3a0769f9038291566",
-      "bytes": 162813,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 686,
       "height": 450
     },
     {
@@ -6625,16 +5936,6 @@
       "height": 450
     },
     {
-      "id": "ron-0886",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/50244327168_842f8593b0_c.jpg",
-      "sha256": "1cebe88a80e5d0005619214493294bd79f1a4c4c0342079d7081278758a09026",
-      "bytes": 249272,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 663,
-      "height": 450
-    },
-    {
       "id": "ron-0891",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/51357947200_741374679b_c.jpg",
       "sha256": "67ded2c24671c44563bb2736d3fb368bcd1e1f5c2baa1e38dd058823a4f4121d",
@@ -6665,16 +5966,6 @@
       "height": 450
     },
     {
-      "id": "ron-0895",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/5261219848_7ae2f7f8e7_c.jpg",
-      "sha256": "f3f942ba30669457c0d8a4199dc0fdc2cee05cf4f0112407125e38a0eb8b344a",
-      "bytes": 220664,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 582,
-      "height": 450
-    },
-    {
       "id": "ron-0896",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/5261254556_a73a4a5d45_c.jpg",
       "sha256": "6f8bc0560eef3375e472cbee588bee97556a05f6da08b0bffb4892f248a6d99e",
@@ -6682,16 +5973,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 600,
-      "height": 450
-    },
-    {
-      "id": "ron-0897",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/5261286392_f08f2fa93e_c.jpg",
-      "sha256": "fdc2f9a7e5f0a5061a541edd406c9dc6661586a53346435d1bce8e1478d7aa33",
-      "bytes": 181911,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 630,
       "height": 450
     },
     {
@@ -6725,30 +6006,10 @@
       "height": 450
     },
     {
-      "id": "ron-0901",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/53072581827_4bb8190187_c.jpg",
-      "sha256": "2d4710c1fbf3167a4aae94b406f5db79a13b87b24bfba694fea66304c2690da6",
-      "bytes": 251927,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0903",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/53726948372_f9ef836110_c.jpg",
       "sha256": "0fdbb0ec99f9ec31dd253e77a3f454bc1c7b769a41f81b332d1bb483896bc7f2",
       "bytes": 245561,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0904",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/53728169038_a2fa4bce07_c.jpg",
-      "sha256": "27f343577382b89bd906fbbb4a7b630f3bdfe2d5ef467d81af6864fbf1bfe4e0",
-      "bytes": 164527,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
@@ -6762,16 +6023,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0907",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/6144774350_bc0f2879a8_c.jpg",
-      "sha256": "44510ff925002e264c56725d3a53715658bacd6d0080d95da52de2d0a1714254",
-      "bytes": 193367,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 600,
       "height": 450
     },
     {
@@ -6792,16 +6043,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 679,
-      "height": 450
-    },
-    {
-      "id": "ron-0910",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/6860375428_a0d50c4770_c.jpg",
-      "sha256": "4615954fa44dbaca8b5c0cf9ad84f4a203a1ba4f2d16331084cc4222f653bc04",
-      "bytes": 179898,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 646,
       "height": 450
     },
     {
@@ -7015,16 +6256,6 @@
       "height": 450
     },
     {
-      "id": "ron-0933",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1186368271.jpg",
-      "sha256": "8d617dd9cbd635609c0f18d911ae975a814629dd2cb6b3a64f872f9a74be5d23",
-      "bytes": 342577,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 672,
-      "height": 450
-    },
-    {
       "id": "ron-0934",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1191331873.jpg",
       "sha256": "36e28d1eea5efb0f12e35387c58403c4613bf2013a139eca4d4c8b82e231fe7e",
@@ -7075,16 +6306,6 @@
       "height": 450
     },
     {
-      "id": "ron-0939",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1394030921.jpg",
-      "sha256": "67ee2b536edb9b453193dc6a36b2646041d916233b58722aaa7311d488be8710",
-      "bytes": 214890,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0940",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1394031014.jpg",
       "sha256": "439a6fb182846e75297ce4775d1c5f270cceb4482c769765f7de7c8804396caa",
@@ -7105,46 +6326,6 @@
       "height": 450
     },
     {
-      "id": "ron-0942",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1443895799.jpg",
-      "sha256": "124f3006cc7e2bb08d9f6995ac92681f03792b217dd149a9fa8a30584525867d",
-      "bytes": 241894,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0943",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1449296756.jpg",
-      "sha256": "0f8ad57215e97afff429fe60ce7cecb6e42a468c0cc3368d011b5d4b41a16381",
-      "bytes": 266199,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0944",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1451622923.jpg",
-      "sha256": "980e166fe71746f99b9a5d59106086ec6b052ab3fb46c40939f1045074d975b2",
-      "bytes": 213970,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 600,
-      "height": 450
-    },
-    {
-      "id": "ron-0945",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1458547187.jpg",
-      "sha256": "b12f6e7de353fbca5c91b72d9b8a6fdaba3fa1e5f15c0af751ed85af5924b15c",
-      "bytes": 110884,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0946",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1477257386.jpg",
       "sha256": "4fffb4cf1886ff9c72d7215455e9dfa6ba140f20d339be2543463e5d64307f11",
@@ -7152,16 +6333,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 656,
-      "height": 450
-    },
-    {
-      "id": "ron-0947",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1522558046.jpg",
-      "sha256": "1cf9d5c322cb2bd1fc4d0eded0bdda9637c183d9f2cfb4f3b5e18121d8cfbeae",
-      "bytes": 185506,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 674,
       "height": 450
     },
     {
@@ -7192,16 +6363,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0951",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1606528669.jpg",
-      "sha256": "0e276d68bdbb21a4fe2dc693ffb77d820243e277c12f5cae68600e0f97446f76",
-      "bytes": 282116,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 677,
       "height": 450
     },
     {
@@ -7265,40 +6426,10 @@
       "height": 450
     },
     {
-      "id": "ron-0958",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1759525850.jpg",
-      "sha256": "d40782666e1d2a0c8754ef8b03fc96daf18013bc6c65efd8ad7832e9a551ac67",
-      "bytes": 306467,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 800,
-      "height": 450
-    },
-    {
-      "id": "ron-0959",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1778473298.jpg",
-      "sha256": "dfa343ae4968e22481f253cf279900c4b0d5801a5fbf9fa794db1d56bd8a0f52",
-      "bytes": 225762,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0960",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1836809179.jpg",
       "sha256": "9f0a3e902a380840a3a11ad78b24d52c9a7a5842ab298132645e65bbf4d172f5",
       "bytes": 307023,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0961",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1840105801.jpg",
-      "sha256": "5b8fde96a20b58c68e62d7a2eec311901bb2b6405ff0d09a19ce6336e90c880a",
-      "bytes": 250247,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
@@ -7332,26 +6463,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0965",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_1849489489.jpg",
-      "sha256": "31eaf91efc0ca040471eb2612b1268d464d782ed6679115b81b44e039b54db09",
-      "bytes": 253031,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 674,
-      "height": 450
-    },
-    {
-      "id": "ron-0966",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_188050856.jpg",
-      "sha256": "07bd909e54db7d2f596b5cb88f0a44618cee9eeeb530d912ee7f54e6ad8b8fa0",
-      "bytes": 283873,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 679,
       "height": 450
     },
     {
@@ -7405,26 +6516,6 @@
       "height": 450
     },
     {
-      "id": "ron-0972",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2026076822.jpg",
-      "sha256": "c1df725a66c86a8b3e39200ba61ab373ad5da8e650d0e8fb8b7a02b66af0f8f0",
-      "bytes": 280622,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0973",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2032070273.jpg",
-      "sha256": "a0a7f6d4d4b4fea14c94ab85a4560157701677e446e5e9951993892ea618af42",
-      "bytes": 252066,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0974",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2045838245.jpg",
       "sha256": "117c9f3b9a36127db7aecec8682b77de1acfb1f5b1edb3db347c37bdb1703676",
@@ -7439,16 +6530,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2055108209.jpg",
       "sha256": "62c332b9370fc99c548628fbc1dee4b91c94638e468f7abe422eef07f55fcbbd",
       "bytes": 277202,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0976",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2056751144.jpg",
-      "sha256": "42c09887dd73f84bc9cc6b5bad50f5d05779e5478e6038796c2a517c29448ed6",
-      "bytes": 277406,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
@@ -7485,26 +6566,6 @@
       "height": 450
     },
     {
-      "id": "ron-0980",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2132204027.jpg",
-      "sha256": "8c8122f7ebc81a322aa710a57dc35731451295485a665ef3f51419b9ca63d88d",
-      "bytes": 199365,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0982",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2211450761.jpg",
-      "sha256": "da8a349716bbbb7544eefedb2b3ade94405c5298820daeea24eb6c117ef6171f",
-      "bytes": 313928,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0983",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2257504949.jpg",
       "sha256": "648f15b1327d5765da5716afdd3da64492e5ea733dfe641d1b7d339461ee1014",
@@ -7515,60 +6576,10 @@
       "height": 450
     },
     {
-      "id": "ron-0984",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2264982847.jpg",
-      "sha256": "716a328890dc67fe26a07dc81cb812ca8ec6e088fa921bce39ac70f0094da894",
-      "bytes": 241476,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0985",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2300023615.jpg",
-      "sha256": "579e5fb5733c9cd2daa54bab6b87495fe607d99609539df962d79e5e92c70bdd",
-      "bytes": 211201,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 800,
-      "height": 450
-    },
-    {
       "id": "ron-0986",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2329141735.jpg",
       "sha256": "5ac5cf8f6aeba3388a407d6e327e7840e007dd3181cc5ce8936f3e087431fdf0",
       "bytes": 309164,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0987",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2372699393.jpg",
-      "sha256": "483c08fbef6c1c518207ec4238d15c73431c7b4a018d5d51f6ae794d4bfe2eab",
-      "bytes": 214528,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0988",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2398151273.jpg",
-      "sha256": "2cb19a07df7480db8d7d4f8eeabe53725a3b7c167e78c24e72f7553b616b8990",
-      "bytes": 299311,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 800,
-      "height": 450
-    },
-    {
-      "id": "ron-0989",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_2413539841.jpg",
-      "sha256": "75b2a93f88262d90d020f2bc81b74e9125356af71d98d253abbff9cf5d216875",
-      "bytes": 155246,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 675,
@@ -7635,16 +6646,6 @@
       "height": 450
     },
     {
-      "id": "ron-0996",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_330174749.jpg",
-      "sha256": "63e1314e1c817999c58062514cf4cfa70f318b49faf86cf5ed95a2fdcb541904",
-      "bytes": 288001,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 676,
-      "height": 450
-    },
-    {
       "id": "ron-0997",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_349292180.jpg",
       "sha256": "7519e72567b41539c1dea8d21d6a81781f774cad4878a0af113d26638416d2dc",
@@ -7652,46 +6653,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 693,
-      "height": 450
-    },
-    {
-      "id": "ron-0998",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_349381400.jpg",
-      "sha256": "465a6f9d28b209c28e2bc147568946c2b54ca99ba3751cc53831c5066673b3b8",
-      "bytes": 160084,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 679,
-      "height": 450
-    },
-    {
-      "id": "ron-0999",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_400200025.jpg",
-      "sha256": "6dadb31b1f3aed56e3e0897de44b72eed59b68f1ff29e35826bc8e5970a0c293",
-      "bytes": 302977,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-1000",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_429091558.jpg",
-      "sha256": "094621d1a183e382f9dca7b83beec4d38ff6b296c2a588e5bf87e76bd6dc6d87",
-      "bytes": 274884,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-1001",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_448898524.jpg",
-      "sha256": "6ba9f50ffc5679eecb5ee90d969c048fd85696defe6ce19b387a16713a6eecd4",
-      "bytes": 272344,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
       "height": 450
     },
     {
@@ -7725,26 +6686,6 @@
       "height": 450
     },
     {
-      "id": "ron-1005",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_458914822.jpg",
-      "sha256": "0e6438fcc9b5e5cf860e3f17576f57abe02258747896f0dc4ef66a5ac3cba2d8",
-      "bytes": 189028,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-1006",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_458914837.jpg",
-      "sha256": "0b7b232149a5f2250c4071a3e1c81afcefff70d334bdc818f47451cd5cde4620",
-      "bytes": 190068,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-1007",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_488557096.jpg",
       "sha256": "2a17669fdf0ca27d55a1a675ef270928a35eeb1db210c68d87f490ba8a3a4d14",
@@ -7765,16 +6706,6 @@
       "height": 450
     },
     {
-      "id": "ron-1009",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_56417584.jpg",
-      "sha256": "7e449fad0c50f8f9805a7c734b71d3a59e983eeb7c4cd9d9a500b283528d9ed4",
-      "bytes": 289073,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-1010",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_565219207.jpg",
       "sha256": "3644af98508ec8b6a54b84da4c5fbc1650940320185959928bac7045c30495c5",
@@ -7785,16 +6716,6 @@
       "height": 450
     },
     {
-      "id": "ron-1011",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_573063163.jpg",
-      "sha256": "be6f2fb7d102d12f8575c6ebbfbd66eeb48583a3b806e90a5c06f6b1b0ad76a5",
-      "bytes": 212673,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-1012",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_575868304.jpg",
       "sha256": "7c5955682c15851fe0e4c086960084216d4aea9cb9ea132e7b49e1902f7984b1",
@@ -7802,16 +6723,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 674,
-      "height": 450
-    },
-    {
-      "id": "ron-1014",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_585798365.jpg",
-      "sha256": "fdf5ac5bf5e56b844491318c201debfa044b3d265e852cdb816032565367243a",
-      "bytes": 202315,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
       "height": 450
     },
     {
@@ -7832,16 +6743,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 671,
-      "height": 450
-    },
-    {
-      "id": "ron-1017",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/real/resized_stck_787934737.jpg",
-      "sha256": "2a6143db747d8b0bd7f6053283dcdd91a16c1dae23eef88f1508f0a591533b24",
-      "bytes": 282508,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 675,
       "height": 450
     },
     {
@@ -9147,5 +8048,453 @@
       "date": "2026-10-29",
       "reason": "user_requested"
     }
-  ]
+  ],
+  "contentFilter": {
+    "date": "2026-10-29",
+    "scope": "Flags, flag designs on clothing and objects, prominent national emblems and national military insignia",
+    "reviewedCount": 911,
+    "removedCount": 110,
+    "removed": [
+      {
+        "id": "ron-0005",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0010",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0016",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0025",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0045",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0069",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0077",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0082",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0094",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0095",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0100",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0102",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0126",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0129",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0142",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0146",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0147",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0184",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0266",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0271",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0279",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0356",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0366",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0369",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0381",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0382",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0384",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0391",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0395",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0398",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0401",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0405",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0413",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0416",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0461",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0469",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0471",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0478",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0479",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0483",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0502",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0522",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0551",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0574",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0580",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0582",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0597",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0625",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0626",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0695",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0696",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0700",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0701",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0702",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0710",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0714",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0723",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0738",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0748",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0754",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0762",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0770",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0816",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0824",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0825",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0861",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0873",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0877",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0880",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0886",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0895",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0897",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0901",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0904",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0907",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0910",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0933",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0939",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0942",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0943",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0944",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0945",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0947",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0951",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0958",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0959",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0961",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0965",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0966",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0972",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0973",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0976",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0980",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0982",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0984",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0985",
+        "reason": "national_or_military_insignia"
+      },
+      {
+        "id": "ron-0987",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0988",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0989",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0996",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0998",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-0999",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1000",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1001",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1005",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1006",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1009",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1011",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1014",
+        "reason": "flag_or_flag_design"
+      },
+      {
+        "id": "ron-1017",
+        "reason": "flag_or_flag_design"
+      }
+    ]
+  }
 }
