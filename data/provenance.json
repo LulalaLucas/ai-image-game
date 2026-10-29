@@ -9,7 +9,8 @@
     "spotfaike_date_anomaly": 9,
     "spotfaike_future": 21,
     "duplicate_images": 1,
-    "low_resolution": 214
+    "low_resolution": 214,
+    "user_requested": 1
   },
   "downloadFailures": [],
   "duplicates": [
@@ -19,7 +20,7 @@
     }
   ],
   "labelCounts": {
-    "ai": 558,
+    "ai": 557,
     "real": 354
   },
   "images": [
@@ -4181,16 +4182,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0567",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-with-the-Japanese-flag-on-his-shirt-is-sitti.jpeg",
-      "sha256": "59c8cd8081c645cb849028eb0ec52acd2962526ad20921ebe551ea1f90915f87",
-      "bytes": 160383,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -9149,5 +9140,12 @@
     "minimumShortEdge": 400,
     "unit": "pixels",
     "removedCount": 214
-  }
+  },
+  "userRequestedRemovals": [
+    {
+      "id": "ron-0567",
+      "date": "2026-10-29",
+      "reason": "user_requested"
+    }
+  ]
 }

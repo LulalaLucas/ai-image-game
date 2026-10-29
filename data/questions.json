@@ -4504,17 +4504,6 @@
       "enabled": true
     },
     {
-      "id": "ron-0567",
-      "label": "ai",
-      "model": "Stable Diffusion 3",
-      "source": {
-        "site": "Real or Not Quiz",
-        "url": "https://www.realornotquiz.com/"
-      },
-      "src": "assets/questions/ron-0567.jpg",
-      "enabled": true
-    },
-    {
       "id": "ron-0568",
       "label": "ai",
       "model": "Stable Diffusion 3",
