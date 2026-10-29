@@ -8843,6 +8843,20 @@
       },
       "src": "assets/questions/spot-137.webp",
       "enabled": true
+    },
+    {
+      "id": "custom-1-ai",
+      "label": "ai",
+      "src": "assets/custom-pairs/1_false.png",
+      "enabled": true,
+      "pairId": "custom-pair-1"
+    },
+    {
+      "id": "custom-1-real",
+      "label": "real",
+      "src": "assets/custom-pairs/1_true.jpg",
+      "enabled": true,
+      "pairId": "custom-pair-1"
     }
   ]
 }

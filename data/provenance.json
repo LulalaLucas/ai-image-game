@@ -21,8 +21,8 @@
     }
   ],
   "labelCounts": {
-    "ai": 508,
-    "real": 293
+    "ai": 509,
+    "real": 294
   },
   "images": [
     {
@@ -8034,6 +8034,24 @@
       "modelEvidence": "publisher_metadata",
       "width": 1536,
       "height": 1152
+    },
+    {
+      "id": "custom-1-ai",
+      "sha256": "3af5fb02bb5465f4845c5a83ffab58b7f44da8123e77eee5ffa5b7ade16739d3",
+      "bytes": 2771742,
+      "width": 1536,
+      "height": 1024,
+      "labelEvidence": "user_provided_label",
+      "pairId": "custom-pair-1"
+    },
+    {
+      "id": "custom-1-real",
+      "sha256": "cc621b6d214006c2c8639cf453032feff5a04798c792102714a649b986d4f257",
+      "bytes": 3378182,
+      "width": 4032,
+      "height": 2707,
+      "labelEvidence": "user_provided_label",
+      "pairId": "custom-pair-1"
     }
   ],
   "note": "Publisher labels and model metadata; redistribution permission not established.",
@@ -8496,5 +8514,13 @@
         "reason": "flag_or_flag_design"
       }
     ]
-  }
+  },
+  "userProvidedPairs": [
+    {
+      "pairId": "custom-pair-1",
+      "date": "2026-10-29",
+      "real": "custom-1-real",
+      "ai": "custom-1-ai"
+    }
+  ]
 }

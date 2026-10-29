@@ -9,6 +9,20 @@ export function shuffle(items, random = Math.random) {
   return result;
 }
 
+function fixedPairGroups(questions) {
+  const groups = new Map();
+  for (const question of questions) {
+    if (question.pairId == null) continue;
+    if (!groups.has(question.pairId)) groups.set(question.pairId, []);
+    groups.get(question.pairId).push(question);
+  }
+  return groups;
+}
+
+function isCompletePair(options) {
+  return options.length === 2 && options.some(q => q.label === 'ai') && options.some(q => q.label === 'real');
+}
+
 export function validateBank(bank) {
   if (!bank || !Array.isArray(bank.questions)) throw new Error('题库需要包含 questions 数组。');
   const ids = new Set();
@@ -33,10 +47,20 @@ export function validateBank(bank) {
     if (question.model != null && typeof question.model !== 'string') {
       errors.push(`${name}：模型名称需要是文本，未公开时可省略。`); continue;
     }
+    if (question.pairId != null && !isText(question.pairId)) {
+      errors.push(`${name}：固定配对编号需要是非空文本。`); continue;
+    }
     paths.add(question.src);
     valid.push(question);
   }
-  return { valid, errors };
+  const invalidPairs = new Set();
+  for (const [pairId, options] of fixedPairGroups(valid)) {
+    if (!isCompletePair(options)) {
+      invalidPairs.add(pairId);
+      errors.push(`固定配对 ${pairId}：需要且仅能包含一张真实照片和一张 AI 图片，已跳过整组。`);
+    }
+  }
+  return { valid: valid.filter(q => !invalidPairs.has(q.pairId)), errors };
 }
 
 export const QUESTION_SECONDS = 15;
@@ -47,11 +71,21 @@ export function createRound(questions, random = Math.random, seenIds = new Set()
     ...shuffle(items.filter(q => seenIds.has(q.id) && !previousIds.has(q.id)), random),
     ...shuffle(items.filter(q => previousIds.has(q.id)), random)
   ];
-  const ai = prioritize(questions.filter(q => q.label === 'ai'));
-  const real = prioritize(questions.filter(q => q.label === 'real'));
-  const size = Math.min(ROUND_SIZE, ai.length, real.length);
-  return Array.from({ length: size }, (_, i) => ({
-    options: shuffle([ai[i], real[i]], random),
+  const fixedPairs = [...fixedPairGroups(questions).values()].filter(isCompletePair);
+  const unpaired = questions.filter(q => q.pairId == null);
+  const ai = prioritize(unpaired.filter(q => q.label === 'ai'));
+  const real = prioritize(unpaired.filter(q => q.label === 'real'));
+  const freePairs = Array.from({ length: Math.min(ai.length, real.length) }, (_, i) => [ai[i], real[i]]);
+  const priority = image => previousIds.has(image.id) ? 2 : seenIds.has(image.id) ? 1 : 0;
+  // Treat a fixed pair as one candidate question, never as two independent images.
+  // Prefer unseen pairs, then seen pairs, and use previous-round images last.
+  const candidates = shuffle([...fixedPairs, ...freePairs], random).map(options => {
+    const ranks = options.map(priority);
+    return { options, last: Math.max(...ranks), total: ranks[0] + ranks[1] };
+  });
+  candidates.sort((a, b) => a.last - b.last || a.total - b.total);
+  return candidates.slice(0, ROUND_SIZE).map(({ options }) => ({
+    options: shuffle(options, random),
     selected: null,
     answered: false,
     correct: null,

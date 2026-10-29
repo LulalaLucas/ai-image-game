@@ -68,3 +68,48 @@ test('保留图片库校验，拒绝重复、越界和不合法标签', () => {
     { ...make(6), src: 'https://example.com/image.jpg' }, { ...make(7), src: make(1).src }, make(8)] });
   assert.equal(valid.length, 2); assert.equal(errors.length, 6); assert.throws(() => validateBank({}));
 });
+
+test('固定搭配只能同题出现，标签保持正确且左右位置随机', () => {
+  const fixed = [{ ...make(100, 'ai'), pairId: 'pair-1' }, { ...make(101, 'real'), pairId: 'pair-1' }];
+  const mixed = [...bank.slice(0, 16), ...fixed], random = seeded(135);
+  const original = structuredClone(mixed), positions = new Set(); let appearances = 0, absences = 0;
+  for (let i = 0; i < 300; i++) {
+    const round = createRound(mixed, random);
+    assert.equal(round.length, 5); assert.equal(new Set(images(round).map(q => q.id)).size, 10);
+    const containing = round.filter(q => q.options.some(image => image.pairId === 'pair-1'));
+    assert.ok(containing.length <= 1);
+    if (!containing.length) { absences++; continue; }
+    const options = containing[0].options; appearances++;
+    assert.deepEqual(options.map(q => q.id).sort(), ['q100', 'q101']);
+    assert.deepEqual(options.map(q => q.label).sort(), ['ai', 'real']);
+    positions.add(options.findIndex(q => q.label === 'ai'));
+  }
+  assert.ok(appearances > 0); assert.ok(absences > 0); assert.equal(positions.size, 2); assert.deepEqual(mixed, original);
+});
+
+test('固定搭配按整组参与未见图片和上一轮回避，不会被拆开补普通题', () => {
+  const fixed = [{ ...make(100, 'ai'), pairId: 'pair-1' }, { ...make(101, 'real'), pairId: 'pair-1' }];
+  const fixedIds = new Set(fixed.map(q => q.id)), seen = new Set(bank.map(q => q.id));
+  assert.ok(createRound([...bank, ...fixed], seeded(7), seen).some(q => q.options.every(image => image.pairId === 'pair-1')));
+  assert.ok(images(createRound([...bank, ...fixed], seeded(7), fixedIds, fixedIds)).every(q => !fixedIds.has(q.id)));
+  const only = createRound([...fixed, make(102, 'ai')], seeded(7));
+  assert.equal(only.length, 1); assert.deepEqual(only[0].options.map(q => q.id).sort(), ['q100', 'q101']);
+  assert.deepEqual(createRound([{ ...make(103, 'real'), pairId: 'orphan' }, make(104, 'ai')]), []);
+});
+
+test('完整配对独立组成题目，多组固定搭配之间不混配', () => {
+  const paired = Array.from({ length: 6 }, (_, i) => [{ ...make(100 + i * 2, 'ai'), pairId: `pair-${i}` }, { ...make(101 + i * 2, 'real'), pairId: `pair-${i}` }]).flat();
+  const round = createRound(paired, seeded(7)); assert.equal(round.length, 5);
+  assert.equal(new Set(images(round).map(q => q.id)).size, 10);
+  round.forEach(q => { assert.equal(q.options[0].pairId, q.options[1].pairId); assert.deepEqual(q.options.map(v => v.label).sort(), ['ai', 'real']); });
+});
+
+test('配对缺失、标签不平衡、超过两张或配对编号无效时跳过整组', () => {
+  const entries = [make(1), make(2), { ...make(10, 'ai'), pairId: 'valid' }, { ...make(11, 'real'), pairId: 'valid' },
+    { ...make(12, 'ai'), pairId: 'orphan' }, { ...make(13, 'ai'), pairId: 'same-label' }, { ...make(14, 'ai'), pairId: 'same-label' },
+    { ...make(15, 'ai'), pairId: 'three' }, { ...make(16, 'real'), pairId: 'three' }, { ...make(17, 'real'), pairId: 'three' },
+    { ...make(18, 'ai'), pairId: 'disabled' }, { ...make(19, 'real'), pairId: 'disabled', enabled: false },
+    { ...make(20, 'real'), pairId: '' }, { ...make(21, 'real'), pairId: 1 }];
+  const {valid, errors} = validateBank({ questions: entries });
+  assert.deepEqual(valid.map(q => q.id), ['q1', 'q2', 'q10', 'q11']); assert.equal(errors.length, 6);
+});
