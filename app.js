@@ -199,7 +199,7 @@ function showResult() {
   const title = node('h2', '', `恭喜你一共答对了${state.score}题`); title.id = 'result-title';
   const score = node('div', 'result-score', String(state.score)); score.append(node('span', '', ` / ${state.round.length}`));
   const accuracy = node('p', 'result-accuracy', `正确率 ${Math.round(state.score / state.round.length * 100)}%`);
-  const reward = state.score >= 4 ? '可获得两个章' : state.score >= 1 ? '可获得一个章' : '';
+  const reward = state.score >= 5 ? '可获得两个章' : state.score >= 2 ? '可获得一个章' : '';
   const rewardNotice = reward ? [node('p', 'result-reward', reward)] : [];
   const again = node('button', 'primary-button', '换一组图片 ↻'); again.type = 'button';
   again.addEventListener('click', () => { startRound(); window.scrollTo({ top: 0, behavior: 'smooth' }); });

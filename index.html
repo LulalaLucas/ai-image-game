@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#8c1c2d">
-  <meta name="description" content="是真实照片，还是 AI 生成？每轮五题，每题两张图片，限时十五秒找出 AI 生成的那张。">
+  <meta name="description" content="是真实照片，还是 AI 生成？每轮六题，每题两张图片，限时十秒找出 AI 生成的那张。">
   <title>真实，还是 AI？</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/game-icon.png"><link rel="icon" type="image/svg+xml" sizes="any" href="./assets/game-icon.svg">
   <link rel="stylesheet" href="./style.css">
@@ -22,16 +22,16 @@
     <section class="introduction" aria-labelledby="title">
       <div class="eyebrow"><span class="tiny-dot"></span>AI 图片辨别挑战</div>
       <h1 id="title">真实，还是 <span>AI</span>？</h1>
-      <p class="instructions">两张图片，一真一假 · 请在 15 秒内<strong class="instruction-highlight">选出 AI 生成的那张</strong></p>
+      <p class="instructions">两张图片，一真一假 · 请在 10 秒内<strong class="instruction-highlight">选出 AI 生成的那张</strong></p>
     </section>
     <section id="game" class="game" aria-label="图片辨识游戏" aria-busy="true">
       <div class="round-bar">
-        <div class="question-number"><strong id="question-number">01</strong><span id="question-total">/ 05</span></div>
+        <div class="question-number"><strong id="question-number">01</strong><span id="question-total">/ 06</span></div>
         <div id="progress" class="progress" aria-label="答题进度"></div>
         <div class="score">答对 <strong id="score">0</strong> 题</div>
       </div>
       <div class="timer-panel" id="timer-panel">
-        <div class="timer-label"><span id="timer-status">图片加载后开始计时</span><span class="timer-value"><strong id="timer">15</strong><small>秒</small></span></div>
+        <div class="timer-label"><span id="timer-status">图片加载后开始计时</span><span class="timer-value"><strong id="timer">10</strong><small>秒</small></span></div>
         <div class="timer-track" aria-hidden="true"><div id="timer-fill" class="timer-fill"></div></div>
       </div>
       <div id="choices" class="choices" role="group" aria-label="选择 AI 生成的图片">
@@ -67,7 +67,7 @@
     <div id="error" class="error-box" role="alert" hidden></div>
     <p id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
   </main>
-  <footer>每轮 5 题 · 每题 15 秒 · 答对得 1 分，超时不得分</footer>
+  <footer>每轮 6 题 · 每题 10 秒 · 答对得 1 分，超时不得分</footer>
   <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title">
     <div class="lightbox-toolbar"><span id="lightbox-title">查看图片</span><div class="zoom-controls"><button id="zoom-out" type="button" aria-label="缩小">−</button><button id="zoom-reset" type="button" aria-label="恢复适合屏幕大小">100%</button><button id="zoom-in" type="button" aria-label="放大">＋</button><button id="close-lightbox" class="close-button" type="button" aria-label="关闭放大图片">×</button></div></div>
     <div id="lightbox-stage" class="lightbox-stage"><div id="lightbox-canvas"><img id="large-image" alt="放大图片"></div></div>
