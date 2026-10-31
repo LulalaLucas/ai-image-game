@@ -11,7 +11,8 @@
     "duplicate_images": 1,
     "low_resolution": 214,
     "user_requested": 1,
-    "flags_and_national_symbols": 110
+    "flags_and_national_symbols": 110,
+    "ai_single_person_portraits": 76
   },
   "downloadFailures": [],
   "duplicates": [
@@ -21,8 +22,8 @@
     }
   ],
   "labelCounts": {
-    "ai": 509,
-    "real": 294
+    "ai": 433,
+    "real": 301
   },
   "images": [
     {
@@ -213,16 +214,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0031",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_20230624BRP004_20230621_154355_224053_AWS_Titan.jpg",
-      "sha256": "4e310d3ceb88dd72ed79e2da15399d1d6a4846a3ac1330217d8074ad07979191",
-      "bytes": 147935,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -446,16 +437,6 @@
       "height": 450
     },
     {
-      "id": "ron-0062",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_240213ukrainemb10494e0366_20240213_103017_536478_AWS_Titan.jpg",
-      "sha256": "5c202396513d593b7a72fe1294d465d9c1d924d9220022490cf882b6d27b9f04",
-      "bytes": 200015,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0063",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_2Fmethode2Ftimes2Fprod2Fweb2Fbin2F8d45f858090843ae8460a52346211a41_20240102_135910_334072_AWS_Titan.jpg",
       "sha256": "582111c2eaa8cbc183b82d9c4a3d28d7be3658b02b1115b421a39ade4fa42f30",
@@ -473,16 +454,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0065",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_3e2a5fc0cf0311eebed9a01e523b5e68_20240220_103124_089845_AWS_Titan.jpg",
-      "sha256": "c53e3c7f0915a85b0e4ba9f89f84b3b8caf0bfe4c6349ea77c1bf0d3e19e70e7",
-      "bytes": 149710,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -563,16 +534,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0076",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_64938687edb12_20230622_135429_096327_AWS_Titan.jpg",
-      "sha256": "c6d2dc915ee00ed0304f837dc92ff3e1b8f3c8a669588504f81d5221d2a9a564",
-      "bytes": 199913,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 750,
       "height": 450
     },
     {
@@ -676,16 +637,6 @@
       "height": 450
     },
     {
-      "id": "ron-0093",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_73f23c9625c9f95e25f01e9a6d599900_20230720_095801_228449_AWS_Titan.jpg",
-      "sha256": "e3357dfc8573cb1e139f392e4d29b80d3afdd71456b12c79f32fac1a6759300e",
-      "bytes": 204679,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 750,
-      "height": 450
-    },
-    {
       "id": "ron-0096",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_93943dbb558961ab85d86175abf42bbc_20240102_135938_218977_AWS_Titan.jpg",
       "sha256": "fd9a04f011eb149d681055999415b1ab9f5c24e49bfa791b623233a8103fb0b9",
@@ -710,16 +661,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_a4550742f8ae4998a9c9bfa9be6d5fd71140x641_20230726_094952_254279_AWS_Titan.jpg",
       "sha256": "afe1c1df86915229fbbabf32aa66f7bae6b2ca46eda77410a824b875835fd4e3",
       "bytes": 215831,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0099",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_AA1cP5ZB_20230621_154346_051463_AWS_Titan.jpg",
-      "sha256": "1190c24179470d1bb37c9466abdc513c0f79776c7efd3e9687448e1a5529fb19",
-      "bytes": 209739,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
@@ -813,16 +754,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0114",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/amazon_titan/img_ref_andyfrascostephanieparsleyphotography10web_20230922_092603_077296_AWS_Titan.jpg",
-      "sha256": "562ead7fbf683beab0e06b04753558858491021f9c0611d1e0a44308b9dc900f",
-      "bytes": 182250,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -1116,16 +1047,6 @@
       "height": 450
     },
     {
-      "id": "ron-0156",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/d3fr_2328104318.jpg",
-      "sha256": "b6c6b903728a04804ab85f60203400032b4ea53e822ea17d380183afa22b40b9",
-      "bytes": 138161,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0157",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/d3fr_2480000122.jpg",
       "sha256": "242293b78f4298c945bfcea4e0ff0d424903cdcc9dba29c3e557b1e9e9de6365",
@@ -1186,30 +1107,10 @@
       "height": 450
     },
     {
-      "id": "ron-0164",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/d3fr_319869052.jpg",
-      "sha256": "6a7e38f572052e0d414c299a87ce5bfc11b0532be215df3774b89c4de48c9765",
-      "bytes": 150653,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0166",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/d3fr_428483413.jpg",
       "sha256": "8d83828dfce7bad5920c88b84856b6d662c31b6cd525709e5d19bebb19be94f9",
       "bytes": 156494,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0170",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/d3fr_54260190.jpg",
-      "sha256": "975c2bf9a049a6baa16f2c061c310129012370344ab499d5404f39f9a1f24001",
-      "bytes": 106006,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -1240,16 +1141,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/d3fr_870710405.jpg",
       "sha256": "a783fe9bc57c2878e5de8f311f7a49ef804d4820fe8cc87cca1f45b1a7061dcd",
       "bytes": 143101,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0175",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/dalle3/dale3_imageFeb6.jpg",
-      "sha256": "790180924af7ae714ab09bb84a7ceaac0e9ebbbbe8e56b0d0262e70ccef4833d",
-      "bytes": 66440,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -1346,30 +1237,10 @@
       "height": 450
     },
     {
-      "id": "ron-0192",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/104.jpg",
-      "sha256": "30cd0a3cb2e9af177b26fd78987ffa62edf620aa82d2db4d656d7d50b884d88a",
-      "bytes": 137580,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0193",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/116.jpg",
       "sha256": "accb9e41d75f53d89bfd8d0c956b4e2dc485adb03870e22360c1af1dae4f44d5",
       "bytes": 120321,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0194",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/118.jpg",
-      "sha256": "13e6a1e46aecdfd3215ee64b7dfc25c00e02e01578006be8b411eb9772f9a919",
-      "bytes": 137129,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 450,
@@ -1396,130 +1267,10 @@
       "height": 450
     },
     {
-      "id": "ron-0197",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/15.jpg",
-      "sha256": "d0f822a18b544e64872b05db68f8198c005be3cdc59e673e75e01be87077f127",
-      "bytes": 138732,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0198",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/157.jpg",
-      "sha256": "0f9005aecdfacdf0494edb7814b456e9dc1e231f04ea5b0936b9babdacd863e2",
-      "bytes": 140531,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0199",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/161.jpg",
-      "sha256": "1e4e0211423efbedcf1124e4728d30813f4e80369afedde9b6410f1173e1a97d",
-      "bytes": 142301,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0200",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/164.jpg",
-      "sha256": "73edbd770301d17b0c594546224266d955dc8820448a7bc89e7226e7caf2a023",
-      "bytes": 141609,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0201",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/165.jpg",
       "sha256": "539c1c0751682ed43355f507023939a7af4c19f8d64f5da8e010f1c9b9f15948",
       "bytes": 132341,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0202",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/169.jpg",
-      "sha256": "33a3a27ddad29cf3ef3741d2d524b7f429840569c0ef582e5df40882edb1bdf3",
-      "bytes": 159075,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0203",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/178.jpg",
-      "sha256": "2c861f948543ce6283fa2c6be5d83f4078ca165c351a85ae59c6988e60544162",
-      "bytes": 131273,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0204",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/18.jpg",
-      "sha256": "e9830216d9bcdf548175322692437d883a4a99b0fc25fabc41223aafddc32c2b",
-      "bytes": 146227,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0205",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/180.jpg",
-      "sha256": "948b5015d2ec097e12d58e9a3b9334ada0f0c3912fa08865ea91fa8d1a6b8a70",
-      "bytes": 159169,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0206",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/182.jpg",
-      "sha256": "b15cb6b43e07ae53e77ceea28d87fb9ee5ed62e0be31cdae818a6e65ba6761c8",
-      "bytes": 133803,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0207",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/194.jpg",
-      "sha256": "49a3ada5561e1dd0fc3e3f8f9d925064589bb1a8f465908e5bd8c8f07deadd43",
-      "bytes": 139718,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0208",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/20.jpg",
-      "sha256": "dcbd3fdaeea838fbdbefc93952cc872210369a5fdcfc7f47cb743927c6975a36",
-      "bytes": 149854,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0209",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/206.jpg",
-      "sha256": "ea74395ac9728664bbf195221f7ee67c436722c13057d6eaa84a224319d68970",
-      "bytes": 142100,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 450,
@@ -1556,40 +1307,10 @@
       "height": 450
     },
     {
-      "id": "ron-0213",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/241.jpg",
-      "sha256": "3d0f3d79565422763f670085d427bd61ff510fdc341d5a79bad912f5e7147169",
-      "bytes": 132320,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0214",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/245.jpg",
-      "sha256": "27d0035db17233695e83199de2962629e037247c1c4ba9787f336c503142945f",
-      "bytes": 137829,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0215",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/249.jpg",
       "sha256": "6d3aac9017b2f419a44b271e7077820d32deb94b75cba52697d11db11bf8af3a",
       "bytes": 137458,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0216",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/265.jpg",
-      "sha256": "765adead5e156294e5848986a5226d09c01a1ed325684a3cad90fa3d0524a63c",
-      "bytes": 139962,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 450,
@@ -1626,66 +1347,6 @@
       "height": 450
     },
     {
-      "id": "ron-0220",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/38.jpg",
-      "sha256": "c8fce61ce495128d74e5fb32cfe128f81b90b98a4bb8a556834109e8e17a4997",
-      "bytes": 139441,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0221",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/381.jpg",
-      "sha256": "df02dc55ed2b1ae954a468cbf36db000ead72558f4a7bacc54a78e212adf77d1",
-      "bytes": 167618,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0222",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/382.jpg",
-      "sha256": "4981e2b310f98dbe89c6eaef2caa2fd9f904d03014c24c6fedd7713198a3796b",
-      "bytes": 137418,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0223",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/383.jpg",
-      "sha256": "8d70f36c528f2163e29e1b4c755b13fd7471b64cffcd72f463fcc94779a3196e",
-      "bytes": 131605,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0224",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/42.jpg",
-      "sha256": "85dad5ac650539d4aa8b02b7ab9274340386cadac3725b27a2ca0ccdcd7761a8",
-      "bytes": 140758,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0225",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/50.jpg",
-      "sha256": "dbea4bef75c7b2ad4aa7e10a0eaa2ef94387d5fed07217328cc732f9d49ca4ab",
-      "bytes": 134831,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0226",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/52.jpg",
       "sha256": "5ee2cd820fd25a597a09a8121a285478b4ac142360d89427b6eedefabf7f34c8",
@@ -1696,70 +1357,10 @@
       "height": 450
     },
     {
-      "id": "ron-0227",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/53.jpg",
-      "sha256": "50956b01ab7f0288be7fc2071b678e3737bfecb89a1c6087241bcb66fdc1f1a5",
-      "bytes": 134484,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0228",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/55.jpg",
-      "sha256": "02ca3279c85e0c043b2b6f20a4aa2945a238da3a0469b86369dcb4974e131a85",
-      "bytes": 137776,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0229",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/58.jpg",
-      "sha256": "fe8c132c6339c103bfb32f95f89effea83f3b9742ed7bd3878ecc024f04aff65",
-      "bytes": 119307,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0230",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/64.jpg",
       "sha256": "2e2452a2ddd66e10f4f301cb3e737fb07daf97fa934c995aee5950d9f16d2c4f",
       "bytes": 148585,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0231",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/69.jpg",
-      "sha256": "6fe50b21ad968e6205524d38d633c352cb59f75d6a2753d8378da9b9f62414b0",
-      "bytes": 135678,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0232",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/75.jpg",
-      "sha256": "c7a4d24f4f236b1752162bdb63fd0c80947362a2615091be3fd3980f4dfd9ff5",
-      "bytes": 135846,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": null,
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0233",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Gan_Fakefaces/78.jpg",
-      "sha256": "1df4a20762fd9f4e89aa679717170da929df5415d13edf41bb74157bdfd19e9c",
-      "bytes": 131992,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": null,
       "width": 450,
@@ -1790,16 +1391,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_close-up_of_a_buildingbuildingaluminiumsteelmetalout_737541dc-3aa0-47c3-96cd-b538a375503f.png_bottom_left.jpg",
       "sha256": "5a56a9a788d5c93464e0f17c2350f5d4132b0b4bbb566683457aa97863d4a7c9",
       "bytes": 189189,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0258",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_close-up_of_a_man_smilinghuman_facesmilepersonforehe_845b306b-2ced-418b-8f18-b6b7141f965e.png_top_right.jpg",
-      "sha256": "5c9936f88d162ccc5152a4576fef6a3dd894cf9b9ce3301bbf221a1450c2af94",
-      "bytes": 169128,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
@@ -2066,16 +1657,6 @@
       "height": 450
     },
     {
-      "id": "ron-0305",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_group_of_soldiers_in_a_vehiclehuman_faceclothingpers_04461fab-a309-47f0-8d2c-e593bd283799.png_bottom_left.jpg",
-      "sha256": "e0adb0f2bdb1598fe715fb6ff995fa7e048fa6cfb829b69eab8ecab61654805b",
-      "bytes": 180205,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0306",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_group_of_soldiers_in_a_vehiclehuman_faceclothingpers_04461fab-a309-47f0-8d2c-e593bd283799.png_top_left.jpg",
       "sha256": "768c335a53d78ac60708854cd3b38816be29fb9561787c87edf6815f16570679",
@@ -2316,16 +1897,6 @@
       "height": 450
     },
     {
-      "id": "ron-0335",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_in_a_black_hat_and_scarfhuman_faceclothingmanper_30512904-243d-455d-8813-78b74f905408.png_top_left.jpg",
-      "sha256": "60644dacc5bea74b793e198340dd06237286207452e6d6abea7c074b66154a16",
-      "bytes": 140626,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
       "id": "ron-0336",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_in_a_factory_with_cheesepersonindoorwinery_photo_5143f609-c267-4656-9900-2f8b70b1d23b.png_bottom_left.jpg",
       "sha256": "ade7fab5abe1dc1ab078adc5da257649ab22373f12c99568e99c915eb37e069a",
@@ -2346,40 +1917,10 @@
       "height": 450
     },
     {
-      "id": "ron-0338",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_in_a_military_uniform_talking_to_another_manhuma_0dc7bb8c-867b-4233-b971-b26cca7225d0.png_top_right.jpg",
-      "sha256": "950658157bf804c2fb84751e2c3d2216308aaab68111a8ae0972ff224f882d42",
-      "bytes": 193022,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0339",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_in_a_suit_and_tiehuman_faceclothingpersontieblaz_cc62b0cc-7883-4fef-a932-ba864e5b781d.png_top_left.jpg",
-      "sha256": "d028b03d8127272885b2132face87ab048cab392dd0ed1321a4b8e1c4b2da8e1",
-      "bytes": 71407,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0343",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_in_camouflage_holding_a_gunoutdoorskyweapongunfi_c4ecd956-ce60-4050-a829-05630998d820.png_top_right.jpg",
       "sha256": "3d9057b443aa18dcf3972f6f8964410f0b9cabccaed548cab4452103257bad17",
       "bytes": 126336,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0344",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_singing_into_a_microphoneconcertperformanceenter_2c18ad12-a35b-4a9b-b460-5753dea5892d.png_top_right.jpg",
-      "sha256": "47069de071d2f47e13b6f91f9c1ab3dc5c1902ff0e8ce40b5ea06651548fad2d",
-      "bytes": 98016,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -2393,46 +1934,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0346",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_wearing_a_white_headdresshuman_facemanpersonhuma_a4535753-060e-4e7b-bb53-0087ec5628b9.png_bottom_right.jpg",
-      "sha256": "33dc3f25638b78a224a28be83374369c18dea1847cab7db4907253a99c507b3f",
-      "bytes": 175622,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0347",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_wearing_a_white_headdresshuman_facemanpersonhuma_a4535753-060e-4e7b-bb53-0087ec5628b9.png_top_left.jpg",
-      "sha256": "164381384fa518028a7350265c2b89680ff9918ac94a5773a6d43e2730350dcf",
-      "bytes": 176640,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0349",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_with_grey_hair_and_a_black_shirthuman_faceperson_b6e6b112-e2e2-47c0-9b6d-8534ef1eec8e.png_bottom_right.jpg",
-      "sha256": "d9173cd8ba4d64cb150e020f2e00216c41d8202ce25d063e26ec7648594e9f43",
-      "bytes": 142921,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0350",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_man_with_tattoos_on_his_arm_leaning_against_a_carper_7240bd5b-6fe9-4632-9665-10e5091598f9.png_bottom_left.jpg",
-      "sha256": "bda3c180124ec38e2820c2b97f97158535082623afbd7082749599e0d5621569",
-      "bytes": 126254,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -2453,16 +1954,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0353",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_portrait_of_Juan_Lavista_Ferres_from_Microsoft_AI_fo_cda8b496-5edd-4c72-9f61-ac2fea01881e.png_top_right.jpg",
-      "sha256": "4211e8ec0039e593b42c666d228a07ac54cafd4359c9691c362c8a893a9bc95a",
-      "bytes": 106947,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -2540,16 +2031,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_woman_speaking_into_a_microphonehuman_facemicrophone_ba190e7f-7283-43e6-bc89-1f069ad2dec3.png_top_left.jpg",
       "sha256": "bbcaf22030cddeab8dc9b8e06f85ed8381f19ca32f50be6cdd234ad8d6f8b0de",
       "bytes": 156493,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 675,
-      "height": 450
-    },
-    {
-      "id": "ron-0370",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_a_woman_with_black_hair_and_a_white_scarfhuman_faceclo_77ecc8af-ce12-47b5-80b5-3de19ae5e5f8.png_bottom_right.jpg",
-      "sha256": "06f6fc033402a46f70b5c09cd8a0bbba6df4abf5269529de596fcbdfa1054845",
-      "bytes": 160426,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 675,
@@ -2636,16 +2117,6 @@
       "height": 450
     },
     {
-      "id": "ron-0383",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_personmilitary_organizationinfantryshotgunmantroopshoo_4b0b7ab8-e53e-4e8f-8417-dc16b0f5be1c.png_top_left.jpg",
-      "sha256": "15b7261f07a7ec653623f5fd629b4834d45fda3f4a020afdb83a302950bd668a",
-      "bytes": 131135,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0385",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/Midjourney/toma4273_two_soldiers_standing_on_a_path_near_a_helicopteroutdo_bfc2221f-c3fb-4c0f-a2e0-f1e22e118ae1.png_bottom_left.jpg",
       "sha256": "7eacf74a3d7750bc2d8ddce9c2df9b6d91d0c47c06a3586e38c0cc84e69161da",
@@ -2713,16 +2184,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "conflicting_folder_and_filename",
       "width": 865,
-      "height": 450
-    },
-    {
-      "id": "ron-0393",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/img_ref_palestinianmilitantsofthealnassersaladinbrigadestakepartinanantiisraelmilitaryshowinkhanyounisinthesoutherngazastrip_20240129_081535_307202_SDXL.jpg",
-      "sha256": "fafb26c2d1d2ff992dc2ec2fea340667ea0e11a409ad60f6f9f89eab7dffc069",
-      "bytes": 168750,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "conflicting_folder_and_filename",
-      "width": 673,
       "height": 450
     },
     {
@@ -2956,16 +2417,6 @@
       "height": 450
     },
     {
-      "id": "ron-0423",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-bald-man-with-a-beard-is-playing-a-saxophone-in-.jpeg",
-      "sha256": "783b0c61a398839a8b2aec8a570d1b34aefc7dce51460faa7b2e25985da28c69",
-      "bytes": 153817,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 546,
-      "height": 450
-    },
-    {
       "id": "ron-0425",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-black-and-white-agility-dog-weaving-between-pole.jpeg",
       "sha256": "a4235b6dcb89b047a624fd88bf6c2bd8c142fae03459e920371971d0fca92f75",
@@ -3033,16 +2484,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 546,
-      "height": 450
-    },
-    {
-      "id": "ron-0441",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-child-is-sticking-her-head-out-of-the-0095-taxi-.jpeg",
-      "sha256": "7801fbb1041bc6656bb4f460033822b8cf3bce7ff4e501b3e7e0017e3324bdc5",
-      "bytes": 139307,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
       "height": 450
     },
     {
@@ -3170,16 +2611,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-fire-and-smoke-at-night-fire-smoke-heat-pollutio.jpeg",
       "sha256": "fd9ac84c7ca7ad8cf9b9b47172d29dfbc5a6e833bf5181b4cb1db54111fa200d",
       "bytes": 208455,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0462",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-focused-image-of-an-elderly-man-sitting-down-and.jpeg",
-      "sha256": "63a1b7ca571a7f04527ed74b02e0a0589453c75bfd7615ca86fcdbf4ad6ef605",
-      "bytes": 179296,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
@@ -3346,16 +2777,6 @@
       "height": 450
     },
     {
-      "id": "ron-0495",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-people-standing-in-a-hallway-clothing-h.jpeg",
-      "sha256": "02dfada7a2cb3bd6c1a9ab92f14ffeac9a8add04acd3356cfd281bfe0219675c",
-      "bytes": 149493,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
       "id": "ron-0496",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-people-standing-in-a-hallway-clothing-p.jpeg",
       "sha256": "b07692048ec6eb6eff8597ed0bddf7e50872119da2d952854795d2ac5c8441e9",
@@ -3383,16 +2804,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0503",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-group-of-soldiers-in-military-uniforms-outdoor-c.jpeg",
-      "sha256": "79694c4ed9081102d182175c277154a71dd0e7275059e524698f61f2d285d8a9",
-      "bytes": 301611,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 1080,
       "height": 450
     },
     {
@@ -3586,16 +2997,6 @@
       "height": 450
     },
     {
-      "id": "ron-0533",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-in-camouflage-holding-a-pipe-clothing-person.jpeg",
-      "sha256": "ae4f165da2c2d6ff46f58aca8afaddc0f8d3235a6007e65c0761aad67d80e6f3",
-      "bytes": 250111,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
       "id": "ron-0534",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-in-camouflage-standing-in-front-of-a-destroy.jpeg",
       "sha256": "8b5f6c7b87a94e142b4e16bd3dab4ef571c418e02df40b08ee372091ed90271e",
@@ -3610,16 +3011,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-is-sitting-on-the-stoop-with-beer-and-cigare.jpeg",
       "sha256": "638a8fc8edc2147b58c82b37d72a82bebedfb6e4b1fa1ad17ae19c6386372b86",
       "bytes": 210649,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0538",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-looking-at-his-phone-building-street-outdoor.jpeg",
-      "sha256": "1abdc9c7cb02dd49e3393cf2c42045fb2791b4517e042aec331199509fcc7f8c",
-      "bytes": 215812,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
@@ -3696,36 +3087,6 @@
       "height": 450
     },
     {
-      "id": "ron-0555",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-wearing-a-flowered-shirt-is-aggressively-pla.jpeg",
-      "sha256": "6d57798bcf4db71ad6b7bc9c4fecca3b6cefe1c295beb3011b9eb07d4d1b674c",
-      "bytes": 282941,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0558",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-wearing-a-white-striped-top-and-a-white-hat-.jpeg",
-      "sha256": "df5f8f506475fcd5570a25ca4e5bb58d24b1ef0fd0364f46c07b73440e7a85f9",
-      "bytes": 253749,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0560",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-wearing-glasses-and-a-blue-jacket-human-face.jpeg",
-      "sha256": "3b10e0178307bcb97856ccee84c6e04aa11ec2821669ba90e504df7e751e01cc",
-      "bytes": 174484,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 546,
-      "height": 450
-    },
-    {
       "id": "ron-0561",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-wearing-safety-glasses-and-holding-a-flashli.jpeg",
       "sha256": "dcf75478c8fee84a549f4d507f8d84a2672835a74fc92b663502c43fd44e9c7b",
@@ -3733,36 +3094,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 1080,
-      "height": 450
-    },
-    {
-      "id": "ron-0564",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-with-a-white-headscarf-and-an-I-Love-NY-t-sh.jpeg",
-      "sha256": "67eef21349f096726f8733001f51f2e318cf9a04df6bd51649a847279061a82f",
-      "bytes": 240904,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0565",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-man-with-clown-makeup-glasses-and-a-cigarette-.jpeg",
-      "sha256": "ebfc6f9cc564ea5649f9bf697af6cec0dc5f71f8a4e1076191574f9deb7cf86b",
-      "bytes": 244311,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0568",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-man-with-white-beard-and-mustache-human-face-hum.jpeg",
-      "sha256": "b6ab0e214943191f5b7453772267395756c9b9b02a2af3f4321f5bf86834cceb",
-      "bytes": 213058,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
       "height": 450
     },
     {
@@ -3780,16 +3111,6 @@
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-oil-rig-with-a-sunset-behind-it-cloud-sky-outdoo.jpeg",
       "sha256": "7f753ec8cc488b95f7b4bba10ee9af3b540b45872aa01d3149cb0c070436ab0f",
       "bytes": 177510,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 450,
-      "height": 450
-    },
-    {
-      "id": "ron-0577",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-overweight-male-is-playing-electric-guitar-while.jpeg",
-      "sha256": "2a520a5b3f096a7f10aefec59895f3a3718fb3b72c029c0476947387cf70663c",
-      "bytes": 162782,
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 450,
@@ -4216,16 +3537,6 @@
       "height": 450
     },
     {
-      "id": "ron-0647",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-woman-standing-in-front-of-a-picture-of-a-tower-.jpeg",
-      "sha256": "0ce976ee2f7766c6bbdbcda05ba039832c8e15aa16a5b8b143091a90941fdf27",
-      "bytes": 198945,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
       "id": "ron-0648",
       "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-woman-stands-with-children-on-a-boardwalk-at-nig.jpeg",
       "sha256": "9102dbfab0ebce5e85c7f6cfbeb41c9adf4abbe58b2d399e155f45f8f3376f46",
@@ -4253,36 +3564,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0651",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-woman-wearing-a-face-mask-standing-in-front-of-a.jpeg",
-      "sha256": "0c53e40764faaff9b7d3ca368103aead8451c7a19e87716a99f0855e9db1e4c8",
-      "bytes": 191671,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0652",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_a-woman-wearing-a-mask-and-scrubs-standing-in-a-ro.jpeg",
-      "sha256": "46a4cd13eddeb9d18fd703692fdad9a92a9ae86a44689d0d9cf33c90d8012162",
-      "bytes": 268589,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 1080,
-      "height": 450
-    },
-    {
-      "id": "ron-0654",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_A-woman-with-a-white-shirt-is-standing-near-a-coup.jpeg",
-      "sha256": "0c1a2934e7974d33691ebf6ec33f706d414a9274cbe7ccb86eaaa51e67d24445",
-      "bytes": 214086,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
       "height": 450
     },
     {
@@ -4373,46 +3654,6 @@
       "labelEvidence": "public_path_and_game_answer_logic",
       "modelEvidence": "folder_name",
       "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0671",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_An-older-food-vendor-in-a-white-embroidered-shirt.jpeg",
-      "sha256": "449fad2ce305cdb5a517bc16234ceef47883bab4e442d03c4337b81f152f0391",
-      "bytes": 235303,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 658,
-      "height": 450
-    },
-    {
-      "id": "ron-0672",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_An-older-man-in-a-blue-shirt-leans-over-a-railing-.jpeg",
-      "sha256": "bdf9df215f52ad43130581fddd17e2314254253e5c15ce7877ebe22aedcbc0f7",
-      "bytes": 278030,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 1080,
-      "height": 450
-    },
-    {
-      "id": "ron-0673",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_An-older-man-sits-with-his-orange-juice-at-a-small.jpeg",
-      "sha256": "28cc9a3516eab97725cacf644d2779229dbfbf341a863d1b4a0d178257ac108f",
-      "bytes": 235927,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 788,
-      "height": 450
-    },
-    {
-      "id": "ron-0674",
-      "remoteUrl": "https://www.realornotquiz.com/assets/img/gameImages/fake/stable_diffusion3/SD3_An-older-man-with-a-marathon-number-on-his-chest-i.jpeg",
-      "sha256": "12f15baad81d39921fc451c82b966976d1bbff15387b626cd97653e502493f52",
-      "bytes": 265512,
-      "labelEvidence": "public_path_and_game_answer_logic",
-      "modelEvidence": "folder_name",
-      "width": 1080,
       "height": 450
     },
     {
@@ -8052,6 +7293,90 @@
       "height": 2707,
       "labelEvidence": "user_provided_label",
       "pairId": "custom-pair-1"
+    },
+    {
+      "id": "real-star-001",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Angelina_Jolie_Director_cropped.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angelina_Jolie_Director_cropped.jpg",
+      "sha256": "544a4c98694d0f825c68ebb15f2890d1a9a2c0d66f729908dfef3a652aa94a67",
+      "bytes": 32162,
+      "width": 493,
+      "height": 481,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "Angelina_Jolie_Director.jpg: Alex Villarreal / Washington\nderivative work: Prayer for the wild at heart (talk)"
+    },
+    {
+      "id": "real-star-002",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Brie_Larson_at_Edwards_Air_Force_Base.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brie_Larson_at_Edwards_Air_Force_Base.png",
+      "sha256": "6fd682ef7a511701eb11dffce6bdea9f242d78d5585d965c4b9eae19c8926b77",
+      "bytes": 415309,
+      "width": 412,
+      "height": 595,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "Shannon Collins"
+    },
+    {
+      "id": "real-star-003",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Chris_Evans_in_2019.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Evans_in_2019.jpg",
+      "sha256": "63666d86b330776f670f935cb6b0321a4406a0bc273b641f8114ba21b0a5712a",
+      "bytes": 281240,
+      "width": 1340,
+      "height": 1718,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "United States House of Representatives - Office of Don Young"
+    },
+    {
+      "id": "real-star-004",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Denzel_Washington_on_the_set_of_%22The_Great_Debaters%22_02.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Denzel_Washington_on_the_set_of_%22The_Great_Debaters%22_02.jpg",
+      "sha256": "3228bdac682bb016228cbbc55e5deb29acde3bb84e1cf2f84e5b03f4ad631ff3",
+      "bytes": 228640,
+      "width": 407,
+      "height": 543,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "Office of Governor Deval Patrick of Massachusetts"
+    },
+    {
+      "id": "real-star-005",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Halle_Berry_2023_%28cropped%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Halle_Berry_2023_(cropped).jpg",
+      "sha256": "91622e0e26234c07a3a14f1644dd6fa63f42a38a3c705d78ec8090d4c524948b",
+      "bytes": 212856,
+      "width": 682,
+      "height": 1059,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "Office of Representative Clark"
+    },
+    {
+      "id": "real-star-006",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/TomHanksJan2009_%28cropped%29.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:TomHanksJan2009_(cropped).jpg",
+      "sha256": "28bf98793fdef89804a93e8b2bf980544fa578ba6ad001b6f43d457c1e62340d",
+      "bytes": 158591,
+      "width": 1020,
+      "height": 1225,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "Yeoman 1st Class Donna Lou Morgan"
+    },
+    {
+      "id": "real-star-007",
+      "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Tom_Cruise_May_2022.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tom_Cruise_May_2022.jpg",
+      "sha256": "2e8b2bd2cd63bb828e64178f72d03bbfbdd4649bc7c101ff7547e80935f8fdb0",
+      "bytes": 1365015,
+      "width": 2469,
+      "height": 3457,
+      "labelEvidence": "documented_photograph_from_named_photographer_and_original_source",
+      "license": "Public domain",
+      "author": "U.S. Navy photo by Mass Communication Specialist 2nd Class Keenan Daniels"
     }
   ],
   "note": "Publisher labels and model metadata; redistribution permission not established.",
@@ -8522,5 +7847,130 @@
       "real": "custom-1-real",
       "ai": "custom-1-ai"
     }
-  ]
+  ],
+  "aiPortraitFilter": {
+    "date": "2026-10-31",
+    "scope": "AI single-person close-up and upper-body portraits",
+    "candidates": 114,
+    "removedCount": 76,
+    "retainedCount": 38,
+    "retained": [
+      "ron-0017",
+      "ron-0048",
+      "ron-0051",
+      "ron-0071",
+      "ron-0155",
+      "ron-0188",
+      "ron-0191",
+      "ron-0193",
+      "ron-0195",
+      "ron-0196",
+      "ron-0201",
+      "ron-0210",
+      "ron-0211",
+      "ron-0212",
+      "ron-0215",
+      "ron-0217",
+      "ron-0218",
+      "ron-0219",
+      "ron-0226",
+      "ron-0230",
+      "ron-0304",
+      "ron-0306",
+      "ron-0334",
+      "ron-0345",
+      "ron-0351",
+      "ron-0362",
+      "ron-0367",
+      "ron-0380",
+      "ron-0406",
+      "ron-0419",
+      "ron-0421",
+      "ron-0458",
+      "ron-0523",
+      "ron-0552",
+      "ron-0553",
+      "ron-0569",
+      "ron-0633",
+      "ron-0641"
+    ],
+    "removed": [
+      "ron-0213",
+      "ron-0204",
+      "ron-0558",
+      "ron-0538",
+      "ron-0222",
+      "ron-0099",
+      "ron-0335",
+      "ron-0065",
+      "ron-0200",
+      "ron-0205",
+      "ron-0258",
+      "ron-0202",
+      "ron-0383",
+      "ron-0194",
+      "ron-0164",
+      "ron-0350",
+      "ron-0672",
+      "ron-0353",
+      "ron-0062",
+      "ron-0208",
+      "ron-0203",
+      "ron-0114",
+      "ron-0671",
+      "ron-0349",
+      "ron-0577",
+      "ron-0197",
+      "ron-0654",
+      "ron-0423",
+      "ron-0220",
+      "ron-0370",
+      "ron-0673",
+      "ron-0564",
+      "ron-0647",
+      "ron-0228",
+      "ron-0565",
+      "ron-0227",
+      "ron-0305",
+      "ron-0344",
+      "ron-0216",
+      "ron-0232",
+      "ron-0441",
+      "ron-0223",
+      "ron-0221",
+      "ron-0224",
+      "ron-0347",
+      "ron-0170",
+      "ron-0206",
+      "ron-0462",
+      "ron-0393",
+      "ron-0229",
+      "ron-0652",
+      "ron-0192",
+      "ron-0198",
+      "ron-0346",
+      "ron-0076",
+      "ron-0674",
+      "ron-0175",
+      "ron-0555",
+      "ron-0495",
+      "ron-0156",
+      "ron-0093",
+      "ron-0233",
+      "ron-0209",
+      "ron-0568",
+      "ron-0651",
+      "ron-0533",
+      "ron-0339",
+      "ron-0231",
+      "ron-0503",
+      "ron-0031",
+      "ron-0560",
+      "ron-0214",
+      "ron-0338",
+      "ron-0199",
+      "ron-0207",
+      "ron-0225"
+    ]
+  }
 }
